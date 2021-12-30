@@ -1,5 +1,130 @@
 // ---------------------------------IMPORT---------------------------
-@import "variables";
+@import "variables.scss";
 @import "mixin.scss";
 
 // ---------------------------------HEADER---------------------------
+
+.header {
+    // min-width: 1280px - 1366px
+    @include WH(100%, 80px);
+    @include flex-rw(flex, flex-start, center);
+    padding: 30px;
+    border-bottom: 1px solid #f1f1f1;
+
+    // Logo
+    &__logo {   
+        @include WH( 150px, 48px);
+        margin-right: 60px;
+
+        img {
+            @include image( 100%, 100%, cover);
+        }
+    }
+
+    // Navigation
+    &__navigation {
+
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        margin-bottom: 4px;
+        padding-right: 50px;
+    }
+
+    &__items {
+        padding: 20px 37px;
+        position: relative;
+    }
+    
+    &__link,
+    &__level1--link,
+    &__level2--link {
+        @include size-5(1.5rem, 600, 0px, 2.5rem, $color-text-21);
+        transition: .4s linear;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &::before {
+            @include overplay(absolute, null, 100%, 0, 0, 2);
+            @include WH(0, 2px);
+            content: '';
+            background-color: $color-primary;  
+            transition: .4s linear;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+
+    }
+
+    &__items:hover &__level1 {
+        display: block;
+    }
+    
+    &__level1,
+    &__level2 {
+        background-color: #ffffff;
+        list-style: none;
+        transition: .5s linear;
+        display: none;
+        padding: 15px 0;
+        &--items {
+            padding: 5px 30px;
+        }
+
+        &--link {
+            @include flex-rw(flex, space-between, center);
+            @include size-5(1.4rem, 600, 0px, 2.5rem, $color-text-21);
+            i {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    
+    &__level1 {
+        @include posXY(absolute, 100%, 10%, null);
+        @include WH(230px, auto);
+        border-right: 1px solid #f1f1f1;
+        border-top: 1px solid #f1f1f1;
+        box-shadow: -10px 14px 8px -7px #c9c4c4;
+        
+        &--items {
+            position: relative;
+        }
+    }
+
+    &__level1--items:hover &__level2 {
+        display: block;
+    }
+
+    &__level2 {
+        @include posXY(absolute, 22%, calc(100% + 3px), null);
+        @include WH(230px, auto);
+        border: 1px solid #f1f1f1;
+        box-shadow: 6px 14px 8px -7px #c9c4c4;
+    }
+
+    // Icon
+    &__icon {
+        @include flex-rw(flex, space-evenly, center);
+        @include size-5(2.2rem, 600, 0px, 2.2rem, $color-text-21);
+        margin-bottom: 4px;
+        padding-left: 30px;
+    }
+
+    &__cart,
+    &__search,
+    &__menu {
+        padding: 0 12px;
+    }
+
+}
+
