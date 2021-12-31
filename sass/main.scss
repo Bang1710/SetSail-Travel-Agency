@@ -15,7 +15,7 @@
 //  + Blog
 //  + Shop
 //  + Elements
-// - Cart 
+// - Cart
 // - Search bar
 // - Menu right bar
 @import "header.scss";
@@ -24,11 +24,117 @@
 // - Image slider
 // - Content
 // - Filter
-//   + Where to 
+//   + Where to
 //   + Month
 //   + Travel Type
 //   + Find now
 
+.slider {
+	position: relative;
+	&__items {
+		position: relative;
+		@include WH(100%, auto);
+		overflow: hidden;
+	}
+
+	&__image {
+		@include WH(100%, 500px);
+		overflow: hidden;
+		img {
+			animation: zoom 5s 3s 1;
+			@include image(100%, 100%, cover);
+		}
+	}
+
+	&__content {
+		@include overplay(absolute, 0, 0, 0, 0, 2);
+		@extend %flex-center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&__title {
+		h5 {
+			font-family: "Satisfy", cursive;
+			margin-bottom: 5px;
+			@include size-5(4.8rem, 600, 1px, 5.8rem, $color-text-21);
+			animation: blackinDown 5s 2s 1;
+		}
+	}
+
+	&__subTitle {
+		h1 {
+			@include size-5(12rem, 500, 1px, 12rem, $color-text-ff);
+			animation: blackinUp 5s 2s 1;
+			box-shadow: $box-shadow;
+		}
+	}
+
+	&__para {
+		p {
+			@include size-5(2rem, 400, 1px, 2.6rem, $color-text-ff);
+			animation: blackinUp 5s 2s 1;
+			box-shadow: $box-shadow;
+			margin-top: 30px;
+		}
+	}
+}
+
+// -----------------------------------SEARCH BAR---------------------------------
+
+.searchbar {
+	position: relative;
+    @include WH(100%, 200px);
+	&__overplay {
+        @include posXY(absolute, 0, 50%, translate(-50%, -50%));
+        @extend %flex-center;
+        @include WH(1100px, 78px);
+        background-color: $color-text-ff;
+		box-shadow: $box-shadow;
+        z-index: 4;
+	}
+
+    &__address,
+    &__month,
+    &__travel {
+        @extend %flex-center;
+        @include button(20px 20px 20px 0, $border);
+        height: 78px;
+        flex: 2;
+        input, select {
+            @include size-5(1.5rem, 400, 0, normal, $color-primary);
+            padding: 20px;
+            flex: 1;
+            option {
+                color: $color-text-21;
+            }
+        }
+
+        select {
+            cursor: pointer;
+        }
+        i {
+            font-size: 1.5rem;
+            color: $color-text-50;
+        }
+    }
+
+    &__find {
+        flex: 1;
+        input {
+            height: 78px;
+            padding: 20px 38px;
+            @include size-4(1.5rem, 600, 0, normal);
+            @include color($color-primary, $color-text-ff);
+            cursor: pointer;
+            &:hover {
+                background-color: #23afa9;
+                transition: $transition-4s;
+            }
+        }
+    }
+
+}
 //------------------------------------- CONTAINER---------------------------------
 // - Perfect holiday
 // - Image Paris
@@ -43,7 +149,7 @@
 // - Pack Up and Go
 
 //--------------------------------------- FOOTER----------------------------------
-// - Contact 
+// - Contact
 // - Address and time
 // - Subcribe
 // - Our Instagram

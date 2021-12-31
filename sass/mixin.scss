@@ -17,6 +17,13 @@
 	color: $color;
 }
 
+@mixin size-4($fsize, $fwidth: normal, $letSpa: 0px, $lineHeight: normal) {
+	font-size: $fsize;
+	font-weight: $fwidth;
+	letter-spacing: $letSpa;
+	line-height: $lineHeight;
+}
+
 @mixin  WH($width, $height:$width) {
 	width: $width;
 	height: $height;

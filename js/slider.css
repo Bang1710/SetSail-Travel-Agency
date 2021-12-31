@@ -1,0 +1,26 @@
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: white;
+    padding: 10px 19px;
+    border-radius: 57px;
+    color: #19e5ec;
+    font-size: 2rem;
+	transition:  .4s linear;
+}
+
+button.slick-prev.slick-arrow {
+	left: 1%;
+}
+
+button.slick-next.slick-arrow {
+	right: 1%;
+}
+
+button.slick-arrow:hover {
+	background-color: #19e5ec;
+	color: #ffffff;
+}

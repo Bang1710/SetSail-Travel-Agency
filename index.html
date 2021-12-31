@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3FD0D4">
     <title>SetSail - Travel Agency</title>
     <link 
     rel="shortcut icon" 
@@ -31,6 +32,7 @@
     rel="stylesheet"
     type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./js/slider.css">
     <!-- Wow.js -->
     <script src="./js/wow.min.js"></script>
     <script>
@@ -45,7 +47,79 @@
     <link rel="stylesheet" href="./css/responsive/responsive.css">
 </head>
 <body>
-    
+    <!-- Search overplay -->
+    <input type="checkbox" name="search" id="search" style="display: none;">
+    <div class="header__overplay--search">
+        <div class="header__overplay--content">
+            <input type="text">
+            <button type="submit">FIND NOW</button>
+        </div>
+
+        <div class="header__icon--close">
+            <label for="search">
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+    </div>
+
+    <!-- Right sidebar -->
+    <input type="checkbox" name="menubar" id="menubar" style="display: none;">
+    <div class="header__menubar">
+        <div class="header__menubar--logo">
+            <img src="./image/logo.png" alt="">
+        </div>
+        <div class="header__menubar--content">
+            <img src="./image/sidearea-img-2 (1).png" alt="">
+        </div>
+        <div class="header__menubar--map">
+            <img src="./image/sidearea-img.jpg" alt="">
+        </div>
+        <div class="header__menubar--p">
+            <p>Lorem ipsum dolor sit amet, 
+            consectetuer adipis cing elit. 
+            Aenean commodo ligula eget dolor. 
+            Aenean massa. 
+            Cum sociis theme natoque</p>
+        </div>
+        <h2>Find Your Destination</h2>
+        <div class="header__menubar--search">
+            <input type="text" placeholder="Search ....">
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="header__menubar--contact">
+            <h2>Follow me</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__menubar--close">
+            <label for="menubar">
+                <i class="far fa-times-circle"></i>
+            </label>
+        </div>
+    </div>
+
     <div id="main">
         <div class="header">
             <div class="header__logo">
@@ -55,7 +129,7 @@
             <div class="header__navigation">
                 <ul class="header__list">
                     <li class="header__items">
-                        <a class="header__link">
+                        <a class="header__link active" >
                             Home
                         </a>
                         <ul class="header__level1">
@@ -285,21 +359,143 @@
             <div class="header__icon">
                 <div class="header__cart">
                     <i class="fas fa-shopping-cart"></i>
+                    <div class="header__cart--info">
+                        <h2>No products in the cart</h2>
+                    </div>
                 </div>
 
                 <div class="header__search">
-                    <i class="fas fa-search"></i>
+                    <label for="search">
+                        <i class="fas fa-search"></i>
+                    </label>
                 </div>
 
                 <div class="header__menu">
-                    <i class="fas fa-bars"></i>
+                    <label for="menubar">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+            <!-- Items-1 -->
+            <div class="slider__items">
+                <div class="slider__image ">
+                    <img src="./image/slider__1.jfif" alt="slider__1">
+                </div>
+                <div class="slider__content">
+
+                    <div class="slider__title">
+                        <h5>Let's go now</h5>
+                    </div>
+                    <div class="slider__subTitle">
+                        <h1>Explore and travel.</h1>
+                    </div>
+                    <div class="slider__para">
+                        <p>
+                            Lorem ipsum dolor sit amet, 
+                            consectetuer adipiscing elit.<br>
+                            Aene an commodo ligula eget dolor. 
+                            Aenean massa. Cum sociis theme
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Items-2 -->
+            <div class="slider__items">
+                <div class="slider__image ">
+                    <img src="./image/slider__2.jfif" alt="slider__1">
+                </div>
+                <div class="slider__content">
+
+                    <div class="slider__title">
+                        <h5 >Come with us</h5>
+                    </div>
+                    <div class="slider__subTitle">
+                        <h1>Relax and enjoy.</h1>
+                    </div>
+                    <div class="slider__para">
+                        <p>
+                            Lorem ipsum dolor sit amet, 
+                            consectetuer adipiscing elit.<br>
+                            Aene an commodo ligula eget dolor. 
+                            Aenean massa. Cum sociis theme
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Items-3 -->
+            <div class="slider__items">
+                <div class="slider__image ">
+                    <img src="./image/slider__3.jfif" alt="slider__1">
+                </div>
+                <div class="slider__content">
+
+                    <div class="slider__title">
+                        <h5>Go & Discover</h5>
+                    </div>
+                    <div class="slider__subTitle">
+                        <h1>Breathtaking Cities</h1>
+                    </div>
+                    <div class="slider__para">
+                        <p>
+                            Lorem ipsum dolor sit amet, 
+                            consectetuer adipiscing elit.<br>
+                            Aene an commodo ligula eget dolor. 
+                            Aenean massa. Cum sociis theme
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
         </div>
-
-        <div id="slider">
-
+        <div class="searchbar">
+            <div class="searchbar__overplay">
+                <div class="searchbar__address">
+                    <input type="text" placeholder="Where to ?">
+                    <i class="far fa-compass"></i>
+                </div>
+                <div class="searchbar__month">
+                    <select name="month" id="month">
+                        <option value="Choose a month">Choose a month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="	March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <i class="far fa-calendar-minus"></i>
+                </div>
+                <div class="searchbar__travel">
+                    <select name="travel" id="travel">
+                        <option value="Travel type">Travel type</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Latest">Latest</option>
+                        <option value="NY">NY</option>
+                        <option value="Popular">Popular</option>
+                        <option value="Skiing">Skiing</option>
+                        <option value="Trendy">Trendy</option>
+                        <option value="Wine">Wine</option>
+                    </select>
+                    <i class="fas fa-thumbtack"></i>
+                </div>
+                <div class="searchbar__find">
+                    <input type="submit" value="FIND NOW">
+                </div>
+            </div>
         </div>
 
         <div id="container">

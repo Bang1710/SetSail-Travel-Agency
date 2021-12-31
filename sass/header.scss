@@ -5,126 +5,302 @@
 // ---------------------------------HEADER---------------------------
 
 .header {
-    // min-width: 1280px - 1366px
-    @include WH(100%, 80px);
-    @include flex-rw(flex, flex-start, center);
-    padding: 30px;
-    border-bottom: 1px solid #f1f1f1;
+	// min-width: 1280px - 1366px
+	@include WH(100%, 80px);
+	@include flex-rw(flex, flex-start, center);
+	padding: 30px;
+	border-bottom: 1px solid #f1f1f1;
+	box-shadow: $box-shadow;
 
-    // Logo
-    &__logo {   
-        @include WH( 150px, 48px);
-        margin-right: 60px;
+	// -----------------------------LOGO---------------------------
+	&__logo {
+		@include WH(150px, 48px);
+		margin-right: 60px;
 
-        img {
-            @include image( 100%, 100%, cover);
-        }
-    }
+		img {
+			@include image(100%, 100%, cover);
+		}
+	}
 
-    // Navigation
-    &__navigation {
+	// ---------------------------NAVIGATION---------------------
+	&__list {
+		list-style: none;
+		display: flex;
+		margin-bottom: 4px;
+		padding-right: 40px;
+	}
 
-    }
+	&__items {
+		padding: 20px 37px;
+		position: relative;
+	}
 
-    &__list {
-        list-style: none;
-        display: flex;
-        margin-bottom: 4px;
-        padding-right: 50px;
-    }
+	&__link,
+	&__level1--link,
+	&__level2--link {
+		@include size-5(1.5rem, 600, 0px, 2.5rem, $color-text-21);
+		transition: 0.4s linear;
+		cursor: pointer;
+		position: relative;
 
-    &__items {
-        padding: 20px 37px;
-        position: relative;
-    }
-    
-    &__link,
-    &__level1--link,
-    &__level2--link {
-        @include size-5(1.5rem, 600, 0px, 2.5rem, $color-text-21);
-        transition: .4s linear;
-        cursor: pointer;
-        position: relative;
+		&:hover {
+			color: $color-primary;
+		}
 
-        &:hover {
-            color: $color-primary;
-        }
+		&::before {
+			@include overplay(absolute, null, 100%, 0, 0, 2);
+			@include WH(0, 2px);
+			content: "";
+			background-color: $color-primary;
+			transition: 0.3s linear;
+		}
 
-        &::before {
-            @include overplay(absolute, null, 100%, 0, 0, 2);
-            @include WH(0, 2px);
-            content: '';
-            background-color: $color-primary;  
-            transition: .4s linear;
-        }
+		&:hover::before {
+			width: 100%;
+		}
+	}
 
-        &:hover::before {
-            width: 100%;
-        }
+	&__items:hover &__level1,
+	&__level1--items:hover &__level2 {
+		display: block;
+		animation: op1 0.4s linear, transformY 0.4s linear;
+		opacity: 1;
+	}
 
-    }
+	&__level1 {
+		@include posXY(absolute, 100%, 10%, null);
+		@include WH(230px, auto);
+		border-right: 1px solid #f1f1f1;
+		border-top: 1px solid #f1f1f1;
+		// box-shadow: -10px 14px 8px -7px #c9c4c4;
+		box-shadow: $box-shadow;
+	}
 
-    &__items:hover &__level1 {
-        display: block;
-    }
-    
-    &__level1,
-    &__level2 {
-        background-color: #ffffff;
-        list-style: none;
-        transition: .5s linear;
-        display: none;
-        padding: 15px 0;
-        &--items {
-            padding: 5px 30px;
-        }
+	&__level2 {
+		@include posXY(absolute, 22%, calc(100% + 1px), null);
+		@include WH(230px, auto);
+		border: 1px solid #f1f1f1;
+		box-shadow: $box-shadow;
+	}
 
-        &--link {
-            @include flex-rw(flex, space-between, center);
-            @include size-5(1.4rem, 600, 0px, 2.5rem, $color-text-21);
-            i {
-                font-size: 1.5rem;
-            }
-        }
-    }
+	&__level1,
+	&__level2 {
+		background-color: #ffffff;
+		list-style: none;
+		display: none;
+		padding: 15px 0;
+		opacity: 0;
+		z-index: 20;
+		&--items {
+			position: relative;
+			padding: 5px 30px;
+		}
 
-    
-    &__level1 {
-        @include posXY(absolute, 100%, 10%, null);
-        @include WH(230px, auto);
-        border-right: 1px solid #f1f1f1;
-        border-top: 1px solid #f1f1f1;
-        box-shadow: -10px 14px 8px -7px #c9c4c4;
-        
-        &--items {
-            position: relative;
-        }
-    }
+		&--link {
+			@include flex-rw(flex, space-between, center);
+			@include size-5(1.4rem, 600, 0px, 2.5rem, $color-text-21);
+			i {
+				font-size: 1.5rem;
+			}
+		}
+	}
 
-    &__level1--items:hover &__level2 {
-        display: block;
-    }
+	// -----------------------------ICON--------------------
+	&__icon {
+		@include flex-rw(flex, space-evenly, center);
+		@include size-5(2.2rem, 600, 0px, 2.2rem, $color-text-21);
+		margin-bottom: 4px;
+		padding-left: 30px;
+	}
 
-    &__level2 {
-        @include posXY(absolute, 22%, calc(100% + 3px), null);
-        @include WH(230px, auto);
-        border: 1px solid #f1f1f1;
-        box-shadow: 6px 14px 8px -7px #c9c4c4;
-    }
+	&__cart,
+	&__search,
+	&__menu {
+		padding: 10px 12px;
+		i {
+			cursor: pointer;
+		}
 
-    // Icon
-    &__icon {
-        @include flex-rw(flex, space-evenly, center);
-        @include size-5(2.2rem, 600, 0px, 2.2rem, $color-text-21);
-        margin-bottom: 4px;
-        padding-left: 30px;
-    }
+		&:hover {
+			color: $color-primary;
+			transition: all 0.4s linear;
+		}
+	}
+	// -----------------------------CART---------------------
+	&__cart {
+		position: relative;
+		&--info {
+			@include overplay(absolute, 100%, 0, null, null, 2);
+			@include button(20px, 4px);
+			background-color: $color-text-ff;
+			width: 300px;
+			border: $border;
+			box-shadow: 5px 4px 19px -4px #c9c4c5;
+			display: none;
+			opacity: 0;
+			h2 {
+				@include size-5(1.4rem, normal, 1px, 1.4rem, $color-text-84);
+				text-align: center;
+			}
+		}
 
-    &__cart,
-    &__search,
-    &__menu {
-        padding: 0 12px;
-    }
+		&:hover &--info {
+			display: block;
+			opacity: 1;
+			animation: op1 0.4s linear, transformY 0.4s linear;
+		}
+	}
 
+	// ------------------------SEARCH OVERPLAY---------------
+	&__overplay--search {
+		position: fixed;
+		@include WH(100%, 100vh);
+		z-index: 10;
+		background-color: rgba(0, 0, 0, 0.9);
+		display: none;
+		transition: 0.4s linear;
+		overflow: hidden;
+	}
+
+	#search:checked ~ &__overplay--search {
+		display: block;
+		animation: op1 0.4s linear;
+		opacity: 1;
+	}
+
+	&__overplay--content {
+		@extend %flex-center;
+		height: 100vh;
+		input {
+			@include WH(700px, 82px);
+			@include size-5(3rem, 500, 0px, 82px, $color-text-21);
+			@include button(0 35px, 10px 0 0 10px);
+		}
+
+		button {
+			@include button(16px 72px, 0 10px 10px 0);
+			@include color($color-primary, $color-text-ff);
+			@include size-4(3.3rem, 500, 1px, normal);
+		}
+	}
+
+	&__icon--close {
+		@include overplay(absolute, 0%, 0%, null, null, inherit);
+		color: white;
+		font-size: 3rem;
+		i {
+			padding: 10px 16px;
+		}
+		&:hover i {
+			@include color($color-primary, $color-text-ff);
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+
+	// -------------------------MENU SIDEBAR--------------------
+	&__menubar {
+		@include overplay(fixed, 0, 0, 0, null, 10);
+		@include WH(458px, 100vh);
+		@include button(50px 50px 40px, $border);
+		background-color: $color-text-ff;
+		box-shadow: $box-shadow;
+		overflow-y: scroll;
+		transition: transform 0.6s linear, opacity 0.6s linear;
+		transform: translateX(100%);
+		opacity: 0;
+
+		&--logo,
+		&--content,
+		&--map {
+			margin: 0 auto;
+			img {
+				@include image(100%, 100%, cover);
+			}
+		}
+
+		&--logo {
+			@include WH(205px, 65px);
+		}
+
+		&--content {
+			@include WH(282px, 63px);
+			margin: 20px auto 50px auto;
+		}
+
+		&--map {
+			@include WH(358px, 220px);
+
+			img {
+				box-shadow: $box-shadow;
+			}
+		}
+
+		&--p {
+			padding: 36px 0 46px 0;
+			text-align: center;
+			@include size-5(1.4rem, 400, 0px, 2.4rem, $color-text-50);
+		}
+		
+		h2 {
+			padding-bottom: 32px;
+			text-align: center;
+			@include size-5(1.8rem, 600, 1px, 1.8rem, $color-text-21);
+		}
+
+		&--search {
+			@include flex-rw(flex, null, center);
+			padding-bottom: 30px;
+			input {
+				@include size-4(1.4rem, 400, 0px, normmal);
+				@include color($color-back-f8, $color-text-50);
+				width: calc(100% - 50px);
+				padding: 10px 20px;
+			}
+
+			button {
+				width: 50px;
+				padding: 10px 20px;
+				font-size: 1.4rem;
+				@include color($color-primary, $color-text-ff);
+			}
+		}
+
+		&--contact {
+			h2 {
+				text-align: center;
+				padding-bottom: 30px;
+				@include size-5(1.8rem, 600, 1px, 1.8rem, $color-text-21);
+			}
+
+			ul {
+				@extend %flex-center;
+				list-style: none;
+				li {
+					a {
+						@include color($color-primary, $color-text-ff);
+						@include button(5px 9px, 50%);
+						margin: 0 10px;
+					}
+				}
+			}
+		}
+
+		&--close {
+			@include overplay(absolute, 1%, 3%, null, null, null);
+			font-size: 3rem;
+			i:hover {
+				cursor: pointer;
+				color: $color-primary;
+				transition: all 0.4s linear;
+			}
+		}
+	}
+
+	#menubar:checked ~ &__menubar {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
+
 
