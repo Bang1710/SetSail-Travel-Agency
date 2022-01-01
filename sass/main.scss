@@ -66,7 +66,7 @@
 		h1 {
 			@include size-5(12rem, 500, 1px, 12rem, $color-text-ff);
 			animation: blackinUp 5s 2s 1;
-			box-shadow: $box-shadow;
+			text-shadow: $box-shadow;
 		}
 	}
 
@@ -74,7 +74,7 @@
 		p {
 			@include size-5(2rem, 400, 1px, 2.6rem, $color-text-ff);
 			animation: blackinUp 5s 2s 1;
-			box-shadow: $box-shadow;
+			text-shadow: $box-shadow;
 			margin-top: 30px;
 		}
 	}
@@ -84,56 +84,56 @@
 
 .searchbar {
 	position: relative;
-    @include WH(100%, 200px);
+	@include WH(100%, 135px);
 	&__overplay {
-        @include posXY(absolute, 0, 50%, translate(-50%, -50%));
-        @extend %flex-center;
-        @include WH(1100px, 78px);
-        background-color: $color-text-ff;
+		@include posXY(absolute, 0, 50%, translate(-50%, -50%));
+		@extend %flex-center;
+		@include WH(1100px, 78px);
+		background-color: $color-text-ff;
 		box-shadow: $box-shadow;
-        z-index: 4;
+		z-index: 4;
 	}
 
-    &__address,
-    &__month,
-    &__travel {
-        @extend %flex-center;
-        @include button(20px 20px 20px 0, $border);
-        height: 78px;
-        flex: 2;
-        input, select {
-            @include size-5(1.5rem, 400, 0, normal, $color-primary);
-            padding: 20px;
-            flex: 1;
-            option {
-                color: $color-text-21;
-            }
-        }
+	&__address,
+	&__month,
+	&__travel {
+		@extend %flex-center;
+		@include button(20px 20px 20px 0, $border);
+		height: 78px;
+		flex: 2;
+		input,
+		select {
+			@include size-5(1.5rem, 400, 0, normal, $color-primary);
+			padding: 20px;
+			flex: 1;
+			option {
+				color: $color-text-21;
+			}
+		}
 
-        select {
-            cursor: pointer;
-        }
-        i {
-            font-size: 1.5rem;
-            color: $color-text-50;
-        }
-    }
+		select {
+			cursor: pointer;
+		}
+		i {
+			font-size: 1.5rem;
+			color: $color-text-50;
+		}
+	}
 
-    &__find {
-        flex: 1;
-        input {
-            height: 78px;
-            padding: 20px 38px;
-            @include size-4(1.5rem, 600, 0, normal);
-            @include color($color-primary, $color-text-ff);
-            cursor: pointer;
-            &:hover {
-                background-color: #23afa9;
-                transition: $transition-4s;
-            }
-        }
-    }
-
+	&__find {
+		flex: 1;
+		input {
+			height: 78px;
+			padding: 20px 38px;
+			@include size-4(1.5rem, 600, 0, normal);
+			@include color($color-primary, $color-text-ff);
+			cursor: pointer;
+			&:hover {
+				background-color: #23afa9;
+				transition: $transition-4s;
+			}
+		}
+	}
 }
 //------------------------------------- CONTAINER---------------------------------
 // - Perfect holiday
@@ -147,6 +147,418 @@
 // - From our blog
 // - Destination
 // - Pack Up and Go
+
+.modal__video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 12;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	// opacity: 0;
+	transition: 0.4s linear;
+
+	.video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.video__icon {
+		i {
+			position: absolute;
+			top: 3%;
+			right: 2%;
+			font-size: 3rem;
+			color: $color-text-ff;
+		}
+
+		i:hover {
+			color: $color-primary;
+			transition: 0.4s linear;
+			cursor: pointer;
+		}
+	}
+}
+
+#video:checked ~ .modal__video {
+	animation: op1 0.4s linear;
+	opacity: 1;
+	display: block;
+}
+
+.container {
+	.PerfectHoliday {
+		&__title {
+			text-align: center;
+			padding-bottom: 40px;
+			h5 {
+				@include size-6($font-satisfy, 3.3rem, 600, 0px, 6rem, $color-primary);
+			}
+
+			h2 {
+				@include size-5(6.5rem, 600, 0.25px, 7.2rem, $color-text-21);
+			}
+
+			p {
+				@include size-5(1.7rem, 600, 1px, 2.8rem, $color-text-50);
+				margin-top: 10px;
+			}
+		}
+
+		&__list {
+			padding-top: 15px;
+			.grid.wide {
+				width: 1100px;
+			}
+		}
+
+		&__items {
+			margin: 15px 0 15px 0;
+			@include WH(252.5px);
+			overflow: hidden;
+			position: relative;
+			box-shadow: $box-shadow;
+		}
+
+		&__image {
+			@include WH(252.5px);
+			overflow: hidden;
+			img {
+				@include image(252.5px, 252.5px, cover);
+			}
+		}
+
+		&__heading {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			h2 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: white;
+				font-size: 4.8rem;
+				font-weight: 100;
+				font-family: $font-satisfy;
+				text-shadow: $box-shadow;
+				z-index: 5;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.4);
+				border-radius: 100%;
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				-webkit-transition-property: transform;
+				transition-property: transform;
+				-webkit-transition-duration: 1s;
+				transition-duration: 1s;
+				-webkit-transition-timing-function: ease-out;
+				transition-timing-function: ease-out;
+			}
+
+			&:hover:before {
+				-webkit-transform: scale(2);
+				transform: scale(2);
+				z-index: 4;
+			}
+		}
+
+		&__heading:hover {
+			cursor: pointer;
+		}
+
+		&__content {
+			position: absolute;
+			top: 70%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 20px;
+			color: white;
+			box-shadow: $box-shadow;
+			z-index: 10;
+
+			h4 {
+				margin-bottom: 5px;
+				// transform: translateX(-100%);
+				@include size-5(1.8rem, 600, -0.05rem, 1.8rem, $color-text-ff);
+			}
+
+			.subtitle {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&__rating {
+					i {
+						color: #3fd0d5;
+						margin-right: 10px;
+					}
+					span {
+						font-weight: 500;
+						color: $color-text-ff;
+					}
+				}
+
+				&__price {
+					span {
+						font-size: 1.8rem;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		&__greeting {
+			margin: 40px auto 80px auto;
+			width: 438px;
+			height: 133px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.breathtakingCities {
+		background-image: url(../image/breathtaking.jfif);
+		width: 100%;
+		height: 700px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+
+		&__overplay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+
+		&__title {
+			padding: 100px 0 40px 0;
+			text-align: center;
+			h5 {
+				@include size-6($font-satisfy, 3.3rem, 600, 0px, 6rem, $color-primary);
+			}
+
+			h2 {
+				@include size-5(6.5rem, 600, 0.25px, 7.2rem, $color-text-ff);
+			}
+
+			p {
+				@include size-5(1.7rem, 400, 1px, 2.8rem, $color-text-ff);
+				margin-top: 10px;
+			}
+		}
+
+		&__video {
+			width: 1000px;
+			height: 500px;
+			margin: 0 auto;
+			position: relative;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				box-shadow: $box-shadow;
+				border-radius: 2px;
+			}
+
+			.overplay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+
+			i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 20px 20px 20px 27px;
+				background: white;
+				color: #3fd0d4;
+				font-size: 3rem;
+				border-radius: 50%;
+				&:hover {
+					color: #106568;
+					transition: $transition-4s;
+					background-color: rgb(97, 95, 95);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.winter,
+	.plan {
+		&__title {
+			padding-bottom: 50px;
+			text-align: center;
+			h5 {
+				@include size-6($font-satisfy, 3.3rem, 600, 0px, 6rem, $color-primary);
+			}
+
+			h2 {
+				@include size-5(6.5rem, 600, -3.25px, 7.1rem, $color-text-21);
+			}
+
+			p {
+				@include size-5(1.7rem, 400, 1px, 2.8rem, $color-text-50);
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.winter {
+		padding-top: 200px;
+		padding-bottom: 100px;
+
+		&__list {
+			.grid.wide {
+				width: 1100px;
+			}
+		}
+
+		&__items {
+			text-align: center;
+			padding: 15px 0 15px 0;
+			h4 {
+				padding-top: 24px;
+				@include size-5(1.8rem, 600, 0, 2.4rem, $color-text-21);
+			}
+
+			p {
+				@include size-5(1.4rem, normal, 0px, 2.4rem, $color-text-50);
+				margin-top: 8px;
+			}
+		}
+
+		&__image {
+			width: 76px;
+			height: 78px;
+			margin: 0 auto;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				box-shadow: $box-shadow;
+				&:hover {
+					transform: translateY(-10px);
+					box-shadow: -1px 8px 10px 0px #c3c0c0;
+					transition: all 0.2s linear;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.plan {
+		&__list {
+			// margin-left: 50px;
+			margin-bottom: 100px;
+		}
+		
+		&__items {
+			padding-top: 20px;
+			width: 320px;
+			height: auto;
+		}
+
+		&__image {
+			width: 320px;
+			height: 200px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__infor {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 8px 10px 8px 26px;
+			background-color: #3fd0d4;
+			width: inherit;
+			color: white;
+
+			&--callendar,
+			&--indiviual,
+			&--address {
+				margin-right: 20px;
+				i {
+					margin-right: 8px;
+					font-size: 1.4rem;
+				}
+
+				span {
+					font-size: 1.4rem;
+					line-height: 2.4rem;
+				}
+			}
+		}
+
+		&__content {
+			padding: 25px 25px 33px 25px;
+			border: 1px solid #f1f1f1;
+			width: inherit;
+
+
+			h4 {
+				padding-bottom: 8px;
+				@include size-5(2.3rem, 500, -1.1px, 2.8rem, $color-text-21);
+			}
+
+			p {
+				@include size-5(1.4rem, 400, 1px, 2.4rem, $color-text-50);
+			}
+		}
+
+		&__subtitle {
+			padding-top: 4px;
+			font-size: 1.5rem;
+			line-height: 2.4rem;
+			color: #212121;
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			i {
+				font-size: 1.5rem;
+				margin: 0 8px 0 32px;
+			}
+		}
+	}
+}
 
 //--------------------------------------- FOOTER----------------------------------
 // - Contact

@@ -508,7 +508,7 @@
   line-height: 12rem;
   color: #ffffff;
   animation: blackinUp 5s 2s 1;
-  box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
+  text-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
 }
 .slider__para p {
   font-size: 2rem;
@@ -517,14 +517,14 @@
   line-height: 2.6rem;
   color: #ffffff;
   animation: blackinUp 5s 2s 1;
-  box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
+  text-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
 }
 
 .searchbar {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 135px;
 }
 .searchbar__overplay {
   position: absolute;
@@ -543,7 +543,10 @@
   height: 78px;
   flex: 2;
 }
-.searchbar__address input, .searchbar__address select, .searchbar__month input, .searchbar__month select, .searchbar__travel input, .searchbar__travel select {
+.searchbar__address input,
+.searchbar__address select, .searchbar__month input,
+.searchbar__month select, .searchbar__travel input,
+.searchbar__travel select {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -552,7 +555,10 @@
   padding: 20px;
   flex: 1;
 }
-.searchbar__address input option, .searchbar__address select option, .searchbar__month input option, .searchbar__month select option, .searchbar__travel input option, .searchbar__travel select option {
+.searchbar__address input option,
+.searchbar__address select option, .searchbar__month input option,
+.searchbar__month select option, .searchbar__travel input option,
+.searchbar__travel select option {
   color: #212121;
 }
 .searchbar__address select, .searchbar__month select, .searchbar__travel select {
@@ -579,6 +585,418 @@
 .searchbar__find input:hover {
   background-color: #23afa9;
   transition: all 0.4s linear;
+}
+
+.modal__video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 12;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  transition: 0.4s linear;
+}
+.modal__video .video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal__video .video__icon i {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  font-size: 3rem;
+  color: #ffffff;
+}
+.modal__video .video__icon i:hover {
+  color: #3FD0D4;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+
+#video:checked ~ .modal__video {
+  animation: op1 0.4s linear;
+  opacity: 1;
+  display: block;
+}
+
+.container .PerfectHoliday__title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.container .PerfectHoliday__title h5 {
+  font-family: "Satisfy", cursive;
+  font-size: 3.3rem;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 6rem;
+  color: #3FD0D4;
+}
+.container .PerfectHoliday__title h2 {
+  font-size: 6.5rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  line-height: 7.2rem;
+  color: #212121;
+}
+.container .PerfectHoliday__title p {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 2.8rem;
+  color: #505050;
+  margin-top: 10px;
+}
+.container .PerfectHoliday__list {
+  padding-top: 15px;
+}
+.container .PerfectHoliday__list .grid.wide {
+  width: 1100px;
+}
+.container .PerfectHoliday__items {
+  margin: 15px 0 15px 0;
+  width: 252.5px;
+  height: 252.5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
+}
+.container .PerfectHoliday__image {
+  width: 252.5px;
+  height: 252.5px;
+  overflow: hidden;
+}
+.container .PerfectHoliday__image img {
+  width: 252.5px;
+  height: 252.5px;
+  object-fit: cover;
+}
+.container .PerfectHoliday__heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container .PerfectHoliday__heading h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4.8rem;
+  font-weight: 100;
+  font-family: "Satisfy", cursive;
+  text-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+.container .PerfectHoliday__heading:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.container .PerfectHoliday__heading:hover:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  z-index: 4;
+}
+.container .PerfectHoliday__heading:hover {
+  cursor: pointer;
+}
+.container .PerfectHoliday__content {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  color: white;
+  box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.container .PerfectHoliday__content h4 {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+  line-height: 1.8rem;
+  color: #ffffff;
+}
+.container .PerfectHoliday__content .subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .PerfectHoliday__content .subtitle__rating i {
+  color: #3fd0d5;
+  margin-right: 10px;
+}
+.container .PerfectHoliday__content .subtitle__rating span {
+  font-weight: 500;
+  color: #ffffff;
+}
+.container .PerfectHoliday__content .subtitle__price span {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.container .PerfectHoliday__greeting {
+  margin: 40px auto 80px auto;
+  width: 438px;
+  height: 133px;
+}
+.container .PerfectHoliday__greeting img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.container .breathtakingCities {
+  background-image: url(../image/breathtaking.jfif);
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.container .breathtakingCities__overplay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.container .breathtakingCities__title {
+  padding: 100px 0 40px 0;
+  text-align: center;
+}
+.container .breathtakingCities__title h5 {
+  font-family: "Satisfy", cursive;
+  font-size: 3.3rem;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 6rem;
+  color: #3FD0D4;
+}
+.container .breathtakingCities__title h2 {
+  font-size: 6.5rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  line-height: 7.2rem;
+  color: #ffffff;
+}
+.container .breathtakingCities__title p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 2.8rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.container .breathtakingCities__video {
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+.container .breathtakingCities__video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+.container .breathtakingCities__video .overplay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.container .breathtakingCities__video i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px 20px 27px;
+  background: white;
+  color: #3fd0d4;
+  font-size: 3rem;
+  border-radius: 50%;
+}
+.container .breathtakingCities__video i:hover {
+  color: #106568;
+  transition: all 0.4s linear;
+  background-color: #615f5f;
+  cursor: pointer;
+}
+.container .winter__title,
+.container .plan__title {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.container .winter__title h5,
+.container .plan__title h5 {
+  font-family: "Satisfy", cursive;
+  font-size: 3.3rem;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 6rem;
+  color: #3FD0D4;
+}
+.container .winter__title h2,
+.container .plan__title h2 {
+  font-size: 6.5rem;
+  font-weight: 600;
+  letter-spacing: -3.25px;
+  line-height: 7.1rem;
+  color: #212121;
+}
+.container .winter__title p,
+.container .plan__title p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 2.8rem;
+  color: #505050;
+  margin-top: 10px;
+}
+.container .winter {
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.container .winter__list .grid.wide {
+  width: 1100px;
+}
+.container .winter__items {
+  text-align: center;
+  padding: 15px 0 15px 0;
+}
+.container .winter__items h4 {
+  padding-top: 24px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 2.4rem;
+  color: #212121;
+}
+.container .winter__items p {
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 2.4rem;
+  color: #505050;
+  margin-top: 8px;
+}
+.container .winter__image {
+  width: 76px;
+  height: 78px;
+  margin: 0 auto;
+}
+.container .winter__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
+}
+.container .winter__image img:hover {
+  transform: translateY(-10px);
+  box-shadow: -1px 8px 10px 0px #c3c0c0;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.container .plan__list {
+  margin-bottom: 100px;
+}
+.container .plan__items {
+  padding-top: 20px;
+  width: 320px;
+  height: auto;
+}
+.container .plan__image {
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+}
+.container .plan__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .plan__infor {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 10px 8px 26px;
+  background-color: #3fd0d4;
+  width: inherit;
+  color: white;
+}
+.container .plan__infor--callendar, .container .plan__infor--indiviual, .container .plan__infor--address {
+  margin-right: 20px;
+}
+.container .plan__infor--callendar i, .container .plan__infor--indiviual i, .container .plan__infor--address i {
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
+.container .plan__infor--callendar span, .container .plan__infor--indiviual span, .container .plan__infor--address span {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+.container .plan__content {
+  padding: 25px 25px 33px 25px;
+  border: 1px solid #f1f1f1;
+  width: inherit;
+}
+.container .plan__content h4 {
+  padding-bottom: 8px;
+  font-size: 2.3rem;
+  font-weight: 500;
+  letter-spacing: -1.1px;
+  line-height: 2.8rem;
+  color: #212121;
+}
+.container .plan__content p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 2.4rem;
+  color: #505050;
+}
+.container .plan__subtitle {
+  padding-top: 4px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: #212121;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.container .plan__subtitle i {
+  font-size: 1.5rem;
+  margin: 0 8px 0 32px;
 }
 
 @keyframes op1 {

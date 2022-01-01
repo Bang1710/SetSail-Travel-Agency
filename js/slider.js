@@ -23,3 +23,16 @@ $('.slider').slick({
     // variableWidth: true,
 });
 
+$('.plan__list').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  arrows: false,
+  dots: true,
+  cssEase: 'ease-in-out',
+  autoplay:true,
+  autoplaySpeed: 3000,
+});
+
+
+

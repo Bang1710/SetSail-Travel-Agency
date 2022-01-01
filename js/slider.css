@@ -1,4 +1,4 @@
-button.slick-prev.slick-arrow,
+ button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
     position: absolute;
     top: 50%;
@@ -23,4 +23,27 @@ button.slick-next.slick-arrow {
 button.slick-arrow:hover {
 	background-color: #19e5ec;
 	color: #ffffff;
+}
+
+.plan__list ul.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    list-style: none;
+    padding-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plan__list ul li button {
+    font-size: 0;
+    padding: 8px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #679c98;
+}
+
+.plan__list li.slick-active button {
+    background-color: #3fd0d4;
 }
