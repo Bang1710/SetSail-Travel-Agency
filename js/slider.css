@@ -1,4 +1,4 @@
- button.slick-prev.slick-arrow,
+button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
     position: absolute;
     top: 50%;
@@ -41,7 +41,7 @@ button.slick-arrow:hover {
     padding: 8px;
     margin: 0 5px;
     border-radius: 50%;
-    background-color: #679c98;
+    background-color: #b0b3b2;
 }
 
 .plan__list li.slick-active button {

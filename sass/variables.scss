@@ -12,6 +12,17 @@ $transition: all .6s cubic-bezier(.77,0,.175,1);
 $transition-4s: all .4s linear;
 $border: 1px solid $color-border;
 
+@keyframes hover {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 @keyframes op1 {

@@ -224,6 +224,7 @@
 			overflow: hidden;
 			position: relative;
 			box-shadow: $box-shadow;
+			transition: .3s ease;
 		}
 
 		&__image {
@@ -231,6 +232,7 @@
 			overflow: hidden;
 			img {
 				@include image(252.5px, 252.5px, cover);
+				transition: .3s ease .2s;
 			}
 		}
 
@@ -245,13 +247,15 @@
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%, -50%);
 				color: white;
 				font-size: 4.8rem;
 				font-weight: 100;
 				font-family: $font-satisfy;
 				text-shadow: $box-shadow;
 				z-index: 5;
+				opacity: 0;
+				transform: translate(-50%,100%);
+				transition: .5s ease ;
 			}
 
 			&:before {
@@ -272,7 +276,8 @@
 				transition-duration: 1s;
 				-webkit-transition-timing-function: ease-out;
 				transition-timing-function: ease-out;
-			}
+				transition-delay: .2s;
+				-webkit-transition-delay: .2s;			}
 
 			&:hover:before {
 				-webkit-transform: scale(2);
@@ -287,18 +292,18 @@
 
 		&__content {
 			position: absolute;
-			top: 70%;
 			left: 0;
 			right: 0;
 			bottom: 0;
-			padding: 20px;
+			padding: 0px;
+			height: 0;
 			color: white;
 			box-shadow: $box-shadow;
 			z-index: 10;
+			transition: .5s ease .2s;
 
 			h4 {
 				margin-bottom: 5px;
-				// transform: translateX(-100%);
 				@include size-5(1.8rem, 600, -0.05rem, 1.8rem, $color-text-ff);
 			}
 
@@ -480,12 +485,108 @@
 		}
 	}
 
+	.reviewContact {
+		margin: 20px 0 100px;
+		&__items {
+			height: 476px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		&__image {
+			width: 100%;
+			height: 476px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__content {
+			padding: 0;
+			background-color: #3fd0d4;
+			color: #ffffff;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-direction: column;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 0;
+			transition: .5s ease;
+
+			// &:hover {
+			// 	opacity: 1;
+			// 	// height: 100%;
+    		// 	transition: all 0.3s linear;
+
+			// }
+			h2 {
+				@include size-4(1.8rem, 600, 1px, 2.4rem);
+			}
+
+			p {
+				text-align: center;
+				@include size-4(1.4rem, 400, 0px, 2.4rem);
+				margin-top: 10px;
+			}
+
+			ul {
+				list-style: none;
+				display: flex;
+				li {
+					padding: 14px 12px 0 12px;
+					a {
+						i {
+							font-size: 1.6rem;
+							color: $color-text-ff;
+						}
+					}
+				}
+			}
+		}
+
+		&__number {
+			background-color: #3ABDC1;
+			ul {
+				list-style: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 72px 0;
+				li {
+					color: $color-text-ff;
+					text-align: center;
+					padding: 0 80px;
+					h4 {
+						@include size-4(6.5rem, 600, -3.25px, 6.5rem);
+					}
+
+					h3 {
+						@include size-4(1.8rem, 600, 1px, 2.4rem);
+						margin-top: 13px;
+					}
+				}
+			}
+		}
+	}
+
+	.reviewContact__items:hover .reviewContact__content {
+		height: 40%;
+		padding: 20px;
+		cursor: pointer;
+	}
+
 	.plan {
+		background-color: #F8F8F8;
 		&__list {
 			// margin-left: 50px;
 			margin-bottom: 100px;
 		}
-		
+
 		&__items {
 			padding-top: 20px;
 			width: 320px;
@@ -500,6 +601,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				transition: .4s ease;
 			}
 		}
 
@@ -533,7 +635,6 @@
 			border: 1px solid #f1f1f1;
 			width: inherit;
 
-
 			h4 {
 				padding-bottom: 8px;
 				@include size-5(2.3rem, 500, -1.1px, 2.8rem, $color-text-21);
@@ -558,6 +659,36 @@
 			}
 		}
 	}
+
+	.PerfectHoliday__heading:hover h2 {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+	.PerfectHoliday__items:hover {
+		transform: translateY(-10px);
+		box-shadow: 0px 10px 6px 0px #898787;
+	}
+
+	.PerfectHoliday__items:hover img {
+		transform: scale(1.4);
+	}
+
+	.PerfectHoliday__items.circle:hover {
+		transform: translateY(-10px);
+		box-shadow: -1px 8px 10px 0px #c3c0c0;
+	}
+
+	.PerfectHoliday__heading:hover .PerfectHoliday__content {
+		height: 30%;
+		padding: 20px;
+	}
+
+	.plan__items img:hover {
+		transform: scale(1.5);
+		cursor: pointer;
+	}
+
 }
 
 //--------------------------------------- FOOTER----------------------------------
