@@ -25,7 +25,8 @@ button.slick-arrow:hover {
 	color: #ffffff;
 }
 
-.plan__list ul.slick-dots {
+.plan__list ul.slick-dots,
+.topreview__list ul.slick-dots {
     display: flex !important;
     justify-content: center;
     position: absolute;
@@ -37,13 +38,22 @@ button.slick-arrow:hover {
 }
 
 .plan__list ul li button {
-    font-size: 0;
-    padding: 8px;
-    margin: 0 5px;
-    border-radius: 50%;
-    background-color: #b0b3b2;
+    background-color: #b4b1b1;
 }
 
-.plan__list li.slick-active button {
+.plan__list ul li button,
+.topreview__list ul li button {
+    font-size: 0;
+    padding: 6px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.topreview__list ul li button {
+    background-color: #f1f1f1;
+}
+
+.plan__list li.slick-active button,
+.topreview__list li.slick-active button {
     background-color: #3fd0d4;
 }

@@ -34,5 +34,16 @@ $('.plan__list').slick({
   autoplaySpeed: 3000,
 });
 
+$('.topreview__list').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+  cssEase: 'linear',
+  autoplay:true,
+  autoplaySpeed: 2000,
+});
+
 
 
