@@ -1270,6 +1270,25 @@
   color: #ffffff;
   margin-top: 10px;
 }
+.container .topreview__Sydney {
+  padding: 250px 0 200px 0;
+  text-align: center;
+}
+.container .topreview__Sydney h5 {
+  font-family: "Satisfy", cursive;
+  font-size: 3.3rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 6rem;
+  color: #ffffff;
+}
+.container .topreview__Sydney h2 {
+  font-size: 6.5rem;
+  font-weight: 600;
+  letter-spacing: -3.25px;
+  line-height: 7.1rem;
+  color: #ffffff;
+}
 .container .topreview__items {
   display: inline-flex;
   justify-content: center;
@@ -1455,6 +1474,188 @@
 }
 .container .unforgettable__items {
   height: 430px;
+}
+.container .contactUs .grid.wide {
+  width: 1100px;
+}
+.container .contactUs iframe {
+  width: 100%;
+  height: 520px;
+  margin-bottom: 100px;
+}
+.container .contactUs__content h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 4.6rem;
+  color: #212121;
+}
+.container .contactUs__content h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.8rem;
+  color: #505050;
+  margin-top: 15px;
+}
+.container .contactUs__content p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.4rem;
+  color: #212121;
+  margin-top: 10px;
+}
+.container .contactUs__content button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  line-height: 2.2rem;
+  color: #ffffff;
+  padding: 14px 42px;
+  background-color: #3FD0D4;
+  border: 1px solid #fff;
+  margin-top: 30px;
+}
+.container .contactUs__image {
+  width: 456px;
+  height: 292px;
+  margin: 30px 0 0 60px;
+}
+.container .contactUs__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .contactUs__list {
+  padding-top: 100px;
+}
+.container .contactUs__list h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 3.6rem;
+  color: #212121;
+}
+.container .contactUs__list p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.4rem;
+  color: #212121;
+  margin-top: 15px;
+}
+.container .contactUs__list ul {
+  list-style: none;
+  padding-top: 15px;
+}
+.container .contactUs__list ul li {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+}
+.container .contactUs__list ul li i {
+  color: #3FD0D4;
+  margin-right: 13px;
+  font-size: 1.4rem;
+}
+.container .contactUs__list ul li span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 2.4rem;
+  color: #505050;
+}
+.container .contactUs__form {
+  margin-top: 60px;
+  padding: 18px 37px 53px;
+  background-color: #3FD0D4;
+  width: 100%;
+}
+.container .contactUs__form h2 {
+  margin-top: 25px;
+  font-size: 3rem;
+  line-height: 1.2em;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  color: white;
+}
+.container .contactUs__area {
+  margin: 20px 0 6px 0;
+  display: flex;
+  background-color: #6FDCDF;
+  padding: 20px 16px;
+  align-items: baseline;
+}
+.container .contactUs__area i {
+  color: white;
+  margin-right: 12px;
+}
+.container .contactUs__area textarea {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs__area ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs__area :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs__area ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs__lh {
+  display: flex;
+  margin-bottom: 6px;
+}
+.container .contactUs__mail {
+  margin-right: 8px;
+}
+.container .contactUs__mail, .container .contactUs__name {
+  flex: 1;
+  background-color: #6FDCDF;
+  padding: 16px 16px;
+}
+.container .contactUs__mail i, .container .contactUs__name i {
+  color: white;
+  margin-right: 8px;
+}
+.container .contactUs__mail input, .container .contactUs__name input {
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs__mail ::placeholder, .container .contactUs__name ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs__mail :-ms-input-placeholder, .container .contactUs__name :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs__mail ::-ms-input-placeholder, .container .contactUs__name ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+  font-weight: 500;
+}
+.container .contactUs input[type=submit] {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  color: #212121;
+  line-height: 5.2rem;
+  background-color: white;
 }
 .container .PerfectHoliday__heading:hover h2 {
   opacity: 1;
