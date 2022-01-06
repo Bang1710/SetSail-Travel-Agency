@@ -41,7 +41,7 @@
 		@include WH(100%, 500px);
 		overflow: hidden;
 		img {
-			animation: zoom 5s 3s 1;
+			animation: zoom 4s 3s infinite;
 			@include image(100%, 100%, cover);
 		}
 	}
@@ -58,14 +58,14 @@
 			font-family: "Satisfy", cursive;
 			margin-bottom: 5px;
 			@include size-5(4.8rem, 600, 1px, 5.8rem, $color-text-21);
-			animation: blackinDown 5s 2s 1;
+			animation: blackinDown 4s 2s infinite;
 		}
 	}
 
 	&__subTitle {
 		h1 {
 			@include size-5(12rem, 500, 1px, 12rem, $color-text-ff);
-			animation: blackinUp 5s 2s 1;
+			animation: blackinUp 4s 2s infinite;
 			text-shadow: $box-shadow;
 		}
 	}
@@ -73,7 +73,7 @@
 	&__para {
 		p {
 			@include size-5(2rem, 400, 1px, 2.6rem, $color-text-ff);
-			animation: blackinUp 5s 2s 1;
+			animation: blackinUp 4s 2s infinite;
 			text-shadow: $box-shadow;
 			margin-top: 30px;
 		}
@@ -106,9 +106,22 @@
 			@include size-5(1.5rem, 400, 0, normal, $color-primary);
 			padding: 20px;
 			flex: 1;
+			cursor: text;
 			option {
 				color: $color-text-21;
 			}
+		}
+
+		::placeholder {
+			color: $color-primary;
+		}
+
+		::-moz-placeholder {
+			color: $color-primary;
+		}
+
+		::-webkit-input-placeholder {
+			color: $color-primary;
 		}
 
 		select {
@@ -476,7 +489,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				box-shadow: $box-shadow;
+				// box-shadow: $box-shadow;
 				&:hover {
 					transform: translateY(-10px);
 					box-shadow: -1px 8px 10px 0px #c3c0c0;
@@ -641,6 +654,11 @@
 			h4 {
 				padding-bottom: 8px;
 				@include size-5(2.3rem, 500, -1.1px, 2.8rem, $color-text-21);
+				&:hover {
+					color: $color-primary;
+					transition: all 0.4s linear;
+					cursor: pointer;
+				}
 			}
 
 			p {
@@ -707,6 +725,27 @@
 			.grid.wide {
 				width: 1000px;
 			}
+		}
+
+		.col.l-4 {
+			position: relative;
+		}
+
+		.star::before {
+			position: absolute;
+			content: "★";
+			top: 9%;
+			left: 6%;
+			z-index: 4;
+			background-color: #3fd0d4;
+			color: white;
+			padding: 3px 14px;
+			border-radius: 50%;
+			font-size: 3rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #f1f1f1;
 		}
 
 		&__items {
@@ -831,6 +870,11 @@
 			padding-left: 22px;
 			h3 {
 				@include size-5(2.2rem, 600, -1.1px, 2.8rem, $color-text-21);
+				&:hover {
+					color: $color-primary;
+					transition: all 0.4s linear;
+					cursor: pointer;
+				}
 			}
 
 			ul {
@@ -859,6 +903,11 @@
 		&__left {
 			h2 {
 				@include size-5(4rem, 600, -2px, 4.6rem, $color-text-21);
+				&:hover {
+					color: $color-primary;
+					transition: all 0.4s linear;
+					cursor: pointer;
+				}
 			}
 
 			p {
@@ -888,6 +937,11 @@
 				h3 {
 					padding-bottom: 5px;
 					@include size-5(2.2rem, 600, -1.1px, 2.8rem, $color-text-21);
+					&:hover {
+						color: $color-primary;
+						transition: all 0.4s linear;
+						cursor: pointer;
+					}
 				}
 
 				p {
@@ -895,8 +949,15 @@
 					@include size-5(1.4rem, normal, 0px, 2.4rem, $color-text-50);
 				}
 
-				span {
+				h4 {
 					@include size-5(1.4rem, 600, 0px, 2rem, $color-text-21);
+					span {
+						&:hover {
+							color: $color-primary;
+							transition: all 0.4s linear;
+							cursor: pointer;
+						}
+					}
 					i {
 						margin: 0 6px 0 36px;
 					}
@@ -1021,6 +1082,10 @@
 				background-color: $color-primary;
 				border: 1px solid #fff;
 				margin-top: 30px;
+				&:hover {
+					background-color: #23afa9;
+					transition: $transition-4s;
+				}
 			}
 		}
 
@@ -1084,7 +1149,7 @@
 		&__area {
 			margin: 20px 0 6px 0;
 			display: flex;
-			background-color: #6FDCDF;
+			background-color: #6fdcdf;
 			padding: 20px 16px;
 			align-items: baseline;
 			i {
@@ -1098,20 +1163,23 @@
 				color: white;
 				font-weight: 500;
 			}
-			::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			::placeholder {
+				/* Chrome, Firefox, Opera, Safari 10.1+ */
 				color: white;
 				font-weight: 500;
-			  }
-			  
-			  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+			}
+
+			:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
 				color: white;
 				font-weight: 500;
-			  }
-			  
-			  ::-ms-input-placeholder { /* Microsoft Edge */
+			}
+
+			::-ms-input-placeholder {
+				/* Microsoft Edge */
 				color: white;
 				font-weight: 500;
-			  }
+			}
 		}
 
 		&__lh {
@@ -1123,9 +1191,10 @@
 			margin-right: 8px;
 		}
 
-		&__mail, &__name {
+		&__mail,
+		&__name {
 			flex: 1;
-			background-color: #6FDCDF;
+			background-color: #6fdcdf;
 			padding: 16px 16px;
 			i {
 				color: white;
@@ -1136,20 +1205,23 @@
 				color: white;
 				font-weight: 500;
 			}
-			::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			::placeholder {
+				/* Chrome, Firefox, Opera, Safari 10.1+ */
 				color: white;
 				font-weight: 500;
-			  }
-			  
-			  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+			}
+
+			:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
 				color: white;
 				font-weight: 500;
-			  }
-			  
-			  ::-ms-input-placeholder { /* Microsoft Edge */
+			}
+
+			::-ms-input-placeholder {
+				/* Microsoft Edge */
 				color: white;
 				font-weight: 500;
-			  }
+			}
 		}
 
 		input[type="submit"] {
@@ -1160,6 +1232,10 @@
 			color: #212121;
 			line-height: 5.2rem;
 			background-color: white;
+			&:hover {
+				background-color: #23afa9;
+				transition: $transition-4s;
+			}
 		}
 	}
 

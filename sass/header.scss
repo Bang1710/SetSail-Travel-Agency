@@ -156,7 +156,7 @@
 		position: fixed;
 		@include WH(100%, 100vh);
 		z-index: 10;
-		background-color: rgba(0, 0, 0, 0.9);
+		background-color: rgba(0, 0, 0, 1);
 		display: none;
 		transition: 0.4s linear;
 		overflow: hidden;
@@ -174,11 +174,11 @@
 		input {
 			@include WH(700px, 82px);
 			@include size-5(3rem, 500, 0px, 82px, $color-text-21);
-			@include button(0 35px, 10px 0 0 10px);
+			@include button(0 35px, 4px 0 0 4px);
 		}
 
 		button {
-			@include button(16px 72px, 0 10px 10px 0);
+			@include button(16px 72px, 0 4px 4px 0);
 			@include color($color-primary, $color-text-ff);
 			@include size-4(3.3rem, 500, 1px, normal);
 		}

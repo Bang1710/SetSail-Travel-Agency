@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes hover {
   from {
     transform: translateY(100%);
@@ -314,7 +315,7 @@
   width: 100%;
   height: 100vh;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black;
   display: none;
   transition: 0.4s linear;
   overflow: hidden;
@@ -336,11 +337,11 @@
   line-height: 82px;
   color: #212121;
   padding: 0 35px;
-  border-radius: 10px 0 0 10px;
+  border-radius: 4px 0 0 4px;
 }
 .header__overplay--content button {
   padding: 16px 72px;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 4px 4px 0;
   background-color: #3FD0D4;
   color: #ffffff;
   font-size: 3.3rem;
@@ -496,7 +497,7 @@
   overflow: hidden;
 }
 .slider__image img {
-  animation: zoom 5s 3s 1;
+  animation: zoom 4s 3s infinite;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -519,7 +520,7 @@
   letter-spacing: 1px;
   line-height: 5.8rem;
   color: #212121;
-  animation: blackinDown 5s 2s 1;
+  animation: blackinDown 4s 2s infinite;
 }
 .slider__subTitle h1 {
   font-size: 12rem;
@@ -527,7 +528,7 @@
   letter-spacing: 1px;
   line-height: 12rem;
   color: #ffffff;
-  animation: blackinUp 5s 2s 1;
+  animation: blackinUp 4s 2s infinite;
   text-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
 }
 .slider__para p {
@@ -536,7 +537,7 @@
   letter-spacing: 1px;
   line-height: 2.6rem;
   color: #ffffff;
-  animation: blackinUp 5s 2s 1;
+  animation: blackinUp 4s 2s infinite;
   text-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
 }
@@ -574,12 +575,22 @@
   color: #3FD0D4;
   padding: 20px;
   flex: 1;
+  cursor: text;
 }
 .searchbar__address input option,
 .searchbar__address select option, .searchbar__month input option,
 .searchbar__month select option, .searchbar__travel input option,
 .searchbar__travel select option {
   color: #212121;
+}
+.searchbar__address ::placeholder, .searchbar__month ::placeholder, .searchbar__travel ::placeholder {
+  color: #3FD0D4;
+}
+.searchbar__address ::-moz-placeholder, .searchbar__month ::-moz-placeholder, .searchbar__travel ::-moz-placeholder {
+  color: #3FD0D4;
+}
+.searchbar__address ::-webkit-input-placeholder, .searchbar__month ::-webkit-input-placeholder, .searchbar__travel ::-webkit-input-placeholder {
+  color: #3FD0D4;
 }
 .searchbar__address select, .searchbar__month select, .searchbar__travel select {
   cursor: pointer;
@@ -950,7 +961,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
 }
 .container .winter__image img:hover {
   transform: translateY(-10px);
@@ -1105,6 +1115,11 @@
   line-height: 2.8rem;
   color: #212121;
 }
+.container .plan__content h4:hover {
+  color: #3FD0D4;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
 .container .plan__content p {
   font-size: 1.4rem;
   font-weight: 400;
@@ -1175,6 +1190,25 @@
 }
 .container .destination__list .grid.wide {
   width: 1000px;
+}
+.container .destination .col.l-4 {
+  position: relative;
+}
+.container .destination .star::before {
+  position: absolute;
+  content: "★";
+  top: 9%;
+  left: 6%;
+  z-index: 4;
+  background-color: #3fd0d4;
+  color: white;
+  padding: 3px 14px;
+  border-radius: 50%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f1f1f1;
 }
 .container .destination__items {
   width: 292px;
@@ -1313,6 +1347,11 @@
   line-height: 2.8rem;
   color: #212121;
 }
+.container .topreview__content h3:hover {
+  color: #3FD0D4;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
 .container .topreview__content ul {
   list-style: none;
   display: flex;
@@ -1346,6 +1385,11 @@
   letter-spacing: -2px;
   line-height: 4.6rem;
   color: #212121;
+}
+.container .blog__left h2:hover {
+  color: #3FD0D4;
+  transition: all 0.4s linear;
+  cursor: pointer;
 }
 .container .blog__left p {
   margin-top: 12px;
@@ -1381,6 +1425,11 @@
   line-height: 2.8rem;
   color: #212121;
 }
+.container .blog__left--nd h3:hover {
+  color: #3FD0D4;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
 .container .blog__left--nd p {
   padding-bottom: 15px;
   font-size: 1.4rem;
@@ -1389,14 +1438,19 @@
   line-height: 2.4rem;
   color: #505050;
 }
-.container .blog__left--nd span {
+.container .blog__left--nd h4 {
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0px;
   line-height: 2rem;
   color: #212121;
 }
-.container .blog__left--nd span i {
+.container .blog__left--nd h4 span:hover {
+  color: #3FD0D4;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+.container .blog__left--nd h4 i {
   margin: 0 6px 0 36px;
 }
 .container .blog__right {
@@ -1517,6 +1571,10 @@
   border: 1px solid #fff;
   margin-top: 30px;
 }
+.container .contactUs__content button:hover {
+  background-color: #23afa9;
+  transition: all 0.4s linear;
+}
 .container .contactUs__image {
   width: 456px;
   height: 292px;
@@ -1583,7 +1641,7 @@
 .container .contactUs__area {
   margin: 20px 0 6px 0;
   display: flex;
-  background-color: #6FDCDF;
+  background-color: #6fdcdf;
   padding: 20px 16px;
   align-items: baseline;
 }
@@ -1621,7 +1679,7 @@
 }
 .container .contactUs__mail, .container .contactUs__name {
   flex: 1;
-  background-color: #6FDCDF;
+  background-color: #6fdcdf;
   padding: 16px 16px;
 }
 .container .contactUs__mail i, .container .contactUs__name i {
@@ -1656,6 +1714,10 @@
   color: #212121;
   line-height: 5.2rem;
   background-color: white;
+}
+.container .contactUs input[type=submit]:hover {
+  background-color: #23afa9;
+  transition: all 0.4s linear;
 }
 .container .PerfectHoliday__heading:hover h2 {
   opacity: 1;
@@ -1755,6 +1817,146 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: #212121;
+  padding: 100px 80px 78px 80px;
+}
+.footer__image {
+  width: 263px;
+  height: 84px;
+}
+.footer__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer p {
+  font-size: 1.7rem;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 2.8rem;
+  color: #9a9a9a;
+  margin: 16px 0 12px 0;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  padding: 6px 10px 6px 0;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+.footer ul li i {
+  padding-right: 10px;
+}
+.footer__address {
+  padding-left: 30px;
+}
+.footer__address, .footer__subcribe, .footer__ins {
+  margin-top: 10px;
+}
+.footer__address h2, .footer__subcribe h2, .footer__ins h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer__address p, .footer__subcribe p, .footer__ins p {
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 2rem;
+  color: #9a9a9a;
+  margin: 0 0 4px 0;
+}
+.footer__address span, .footer__subcribe span, .footer__ins span {
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.footer__mail {
+  margin-top: 30px;
+}
+.footer__mail, .footer__name {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: #595959;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.footer__mail i, .footer__name i {
+  margin-right: 10px;
+}
+.footer__mail input, .footer__name input {
+  background-color: transparent;
+  color: #ffffff;
+}
+.footer__mail ::placeholder, .footer__name ::placeholder {
+  color: #ffffff;
+  font-weight: 400;
+}
+.footer__mail ::-moz-placeholder, .footer__name ::-moz-placeholder {
+  color: #ffffff;
+  font-weight: 400;
+}
+.footer__mail ::-webkit-input-placeholder, .footer__name ::-webkit-input-placeholder {
+  color: #ffffff;
+  font-weight: 400;
+}
+.footer input[type=submit] {
+  padding: 14px 16px;
+  width: 100%;
+  color: white;
+  background-color: #3fd0d4;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.footer input[type=submit]:hover {
+  background-color: #23afa9;
+  transition: all 0.4s linear;
+}
+.footer__ins--list {
+  margin-top: 20px;
+}
+.footer__ins .row {
+  margin-left: -2.5px;
+  margin-right: -2.5px;
+}
+.footer__ins .col {
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+}
+.footer__ins--img {
+  width: 50px;
+  height: 50px;
+  padding: 2.5px 0;
+}
+.footer__ins--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer h3 {
+  padding-top: 80px;
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
