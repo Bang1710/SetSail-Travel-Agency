@@ -2,4 +2,392 @@
 @import "mobie.scss";
 @import "tablet.scss";
 @import "pc.scss";
+@import "../variables.scss";
 
+.header {
+	@media (min-width: 1224px) {
+		&__logo {
+			margin-right: 0;
+		}
+
+		&__items {
+			padding: 20px 30px;
+		}
+
+		&__list {
+			padding-left: 20px;
+		}
+
+		&__ipad {
+			display: none;
+		}
+	}
+
+	@media (max-width: 1223px) {
+		display: none;
+		&__ipad {
+			display: flex;
+		}
+	}
+}
+
+.slider {
+	@media (min-width: 768px) and (max-width: 1223px) {
+		&__image {
+			height: 560px;
+		}
+
+		&__subTitle h1 {
+			font-size: 7rem;
+			font-weight: 600;
+			line-height: 7rem;
+		}
+
+		&__para p {
+			font-size: 1.8rem;
+			line-height: 2.3rem;
+		}
+
+		&__content {
+			transform: translateY(-12%);
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 1023px) {
+		&__para p {
+			padding: 0 100px;
+		}
+
+		&__image {
+			height: 600px;
+		}
+	}
+}
+
+.searchbar {
+	@media (min-width: 1024px) and (max-width: 1223px) {
+		&__overplay {
+			width: 806px;
+		}
+
+		&__month select,
+		&__travel select {
+			padding: 20px 40px 20px 20px;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 1023px) {
+		height: 400px;
+		&__overplay {
+			width: 78%;
+			height: auto;
+			background-color: $color-text-ff;
+			box-shadow: 5px 8px 13.92px 2.08px rgb(0 0 0 / 10%);
+			z-index: 4;
+			flex-direction: column;
+			top: 20%;
+		}
+
+		&__address,
+		&__month,
+		&__travel {
+			flex-direction: row;
+			background-color: white;
+			width: 100%;
+			border: none;
+			padding: 20px;
+			border-bottom: $border;
+		}
+
+		&__find input {
+			height: 78px;
+			padding: 20px 38px;
+			font-size: 1.5rem;
+			font-weight: 600;
+			letter-spacing: 0;
+			line-height: normal;
+			background-color: #3fd0d4;
+			color: #ffffff;
+			cursor: pointer;
+			width: 100%;
+		}
+		&__find {
+			width: 100%;
+			input {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.container {
+	.topreview {
+		@media (min-width: 768px) and (max-width: 1223px) {
+			height: 850px;
+			&__items {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			&__content {
+				text-align: center;
+				margin-top: 10px;
+				padding-left: 0;
+				ul {
+					margin: 0 auto;
+					justify-content: center;
+				}
+			}
+		}
+	}
+
+	.blog {
+		@media (min-width: 1224px) {
+			&__left--nd p {
+				padding-bottom: 0;
+				margin-top: 0px;
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 1223px) {
+			&__right {
+				width: 500px;
+				height: 700px;
+				margin: 60px auto 60px auto;
+				&--content {
+					padding: 100px 20px;
+
+					h3,
+					h2 {
+						transform: rotate(-12.5deg);
+					}
+				}
+			}
+		}
+	}
+
+	.PerfectHoliday {
+		@media (min-width: 1024px) and (max-width: 1223px) {
+			&__items {
+				margin: 15px auto 15px auto;
+				width: 399px;
+				height: 389px;
+			}
+
+			&__image {
+				width: 399px;
+				height: 399px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.PerfectHoliday__heading:hover .PerfectHoliday__content {
+				height: 25%;
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 1023px) {
+			&__list {
+				.grid.wide {
+					width: 600px;
+				}
+			}
+
+			&__items {
+				margin: 15px auto 15px auto;
+				width: 500px;
+				height: 500px;
+			}
+
+			&__image {
+				width: 500px;
+				height: 500px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.PerfectHoliday__heading:hover .PerfectHoliday__content {
+				height: 17%;
+			}
+		}
+	}
+
+	.breathtakingCities {
+		@media (min-width: 768px) and (max-width: 1223px) {
+			&__video {
+				width: 85%;
+			}
+		}
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+			&__video {
+				height: 450px;
+			}
+		}
+	}
+
+	.reviewContact {
+		.grid {
+			width: 100%;
+		}
+
+		&__items {
+			height: 600px;
+		}
+
+		&__image {
+			height: 600px;
+		}
+
+		.reviewContact__items:hover .reviewContact__content {
+			padding: 30px 20px 20px 20px;
+		}
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            &__number ul {
+                flex-wrap: wrap;
+                li {
+                    padding: 10px 80px 20px;
+                    flex: 1;
+                }
+            }
+        }
+	}
+
+	.plan {
+		@media (min-width: 1024px) and (max-width: 1223px) {
+			&__items {
+				margin: 0 10px;
+			}
+		}
+        @media (min-width: 768px) and (max-width: 1023px) {
+			&__items.slick-slide {
+				margin: 0 20px;
+                width: 370px;   
+			}
+
+            &__image {
+                width: 370px;
+                height: 220px;
+            }
+		}
+	}
+
+	.destination {
+		@media (min-width: 1024px) and (max-width: 1223px) {
+			.grid.wide {
+				max-width: 950px;
+			}
+
+			&__items {
+				margin: 0 auto;
+			}
+		}
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            height: 1870px;
+            &__list .grid.wide {
+                width: auto;
+            }
+
+            &__items {
+				margin: 20px auto;
+                width: 400px;
+                height: 400px;
+			}
+
+             .star::before {
+                left: calc(50% - 160px);
+            }
+
+            &__image {
+                width: 1870px;
+                img {
+                    width: 1870px;
+                }
+            }
+        }
+	}
+
+	.unforgettable {
+		@media (min-width: 1024px) and (max-width: 1223px) {
+			.grid.wide {
+				max-width: 1000px;
+			}
+		}
+	}
+
+	.contactUs {
+		@media (min-width: 768px) and (max-width: 1223px) {
+			.grid.wide {
+				width: 1000px;
+			}
+
+			&__image {
+				width: 100%;
+				height: 500px;
+				margin: 30px 0 0 0;
+			}
+		}
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .grid.wide {
+                width: 700px;
+            }
+        }
+	}
+
+    .winter {
+        @media (min-width: 768px) and (max-width: 1023px) {
+            &__list .grid.wide {
+                width: auto;
+            }
+        }
+    }
+}
+
+.footer {
+	@media (min-width: 1024px) and (max-width: 1223px) {
+		.wide .col {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+
+		.wide .row {
+			margin-left: -16px;
+			margin-right: -16px;
+		}
+
+		&__address,
+		&__subcribe,
+		&__ins {
+			margin-top: 30px;
+		}
+
+		&__address {
+			padding-left: 0;
+		}
+
+		&__ins--img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&__ins--list {
+			.row .col {
+				padding-left: 2.5px;
+				padding-right: 2.5px;
+			}
+
+			.row {
+				margin-left: -2.5px;
+				margin-right: -2.5px;
+			}
+		}
+	}
+}

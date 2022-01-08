@@ -482,6 +482,26 @@
   transform: translateX(0);
 }
 
+.header__ipad {
+  display: flex;
+  height: 70px;
+  background-color: #3fd0d4;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 2.4rem;
+}
+.header__ipad--logo {
+  width: 113px;
+  height: 36px;
+  margin: 0 50px;
+}
+.header__ipad--logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .slider {
   position: relative;
 }
@@ -560,7 +580,7 @@
 }
 .searchbar__address, .searchbar__month, .searchbar__travel {
   padding: 20px 20px 20px 0;
-  border-radius: 1px solid #f1f1f1;
+  border-radius: 0;
   height: 78px;
   flex: 2;
 }

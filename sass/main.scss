@@ -98,7 +98,7 @@
 	&__month,
 	&__travel {
 		@extend %flex-center;
-		@include button(20px 20px 20px 0, $border);
+		@include button(20px 20px 20px 0, 0);
 		height: 78px;
 		flex: 2;
 		input,
