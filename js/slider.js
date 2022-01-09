@@ -54,9 +54,21 @@ $(".plan__list").slick({
 			},
 		},
 		{
+			breakpoint: 897,
+			settings: {
+				slidesToShow: 2,
+			},
+		},
+		{
 			breakpoint: 769,
 			settings: {
 				slidesToShow: 2,
+			},
+		},
+		{
+			breakpoint: 601,
+			settings: {
+				slidesToShow: 1,
 			},
 		},
 	],
@@ -71,7 +83,7 @@ $(".topreview__list").slick({
 	cssEase: "linear",
 	autoplay: false,
 	autoplaySpeed: 2000,
-  responsive: [
+  	responsive: [
 		{
 			breakpoint: 769,
 			settings: {

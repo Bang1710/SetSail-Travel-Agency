@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1223px) {
+@media (min-width: 600px) and (max-width: 1223px) {
   .slider__image {
     height: 560px;
   }
@@ -108,12 +108,24 @@
     transform: translateY(-12%);
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .slider__para p {
     padding: 0 100px;
   }
   .slider__image {
     height: 600px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .slider__subTitle h1 {
+    font-size: 6.1rem;
+    font-weight: 600;
+    line-height: 6.1rem;
+  }
+  .slider__para p {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    padding: 0 160px;
   }
 }
 
@@ -125,7 +137,7 @@
     padding: 20px 40px 20px 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .searchbar {
     height: 400px;
   }
@@ -166,7 +178,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1223px) {
+@media (min-width: 600px) and (max-width: 1223px) {
   .container .topreview {
     height: 850px;
   }
@@ -193,8 +205,22 @@
 }
 @media (min-width: 768px) and (max-width: 1223px) {
   .container .blog__right {
+    width: 600px;
+    height: 750px;
+    margin: 60px auto 60px auto;
+  }
+  .container .blog__right--content {
+    padding: 100px 20px;
+  }
+  .container .blog__right--content h3,
+.container .blog__right--content h2 {
+    transform: rotate(-12.5deg);
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .container .blog__right {
     width: 500px;
-    height: 700px;
+    height: 650px;
     margin: 60px auto 60px auto;
   }
   .container .blog__right--content {
@@ -229,12 +255,33 @@
   }
   .container .PerfectHoliday__items {
     margin: 15px auto 15px auto;
+    width: 600px;
+    height: 600px;
+  }
+  .container .PerfectHoliday__image {
+    width: 100%;
+    height: 100%;
+  }
+  .container .PerfectHoliday__image img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .PerfectHoliday .PerfectHoliday__heading:hover .PerfectHoliday__content {
+    height: 17%;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .container .PerfectHoliday__list .grid.wide {
+    width: auto;
+  }
+  .container .PerfectHoliday__items {
+    margin: 15px auto 15px auto;
     width: 500px;
     height: 500px;
   }
   .container .PerfectHoliday__image {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
   }
   .container .PerfectHoliday__image img {
     width: 100%;
@@ -252,6 +299,15 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .container .breathtakingCities__video {
     height: 450px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .container .breathtakingCities__video {
+    width: 80%;
+    height: 350px;
+  }
+  .container .breathtakingCities__title p {
+    padding: 0 20px;
   }
 }
 .container .reviewContact .grid {
@@ -275,6 +331,23 @@
     flex: 1;
   }
 }
+@media (min-width: 600px) and (max-width: 767px) {
+  .container .reviewContact__items {
+    height: 700px;
+  }
+  .container .reviewContact__image {
+    height: 700px;
+  }
+  .container .reviewContact .reviewContact__items:hover .reviewContact__content {
+    height: 30%;
+  }
+  .container .reviewContact__number ul li {
+    padding: 20px 0px;
+  }
+  .container .reviewContact__number ul {
+    flex-direction: column;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1223px) {
   .container .plan__items {
     margin: 0 10px;
@@ -282,12 +355,27 @@
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .container .plan__items.slick-slide {
-    margin: 0 20px;
-    width: 370px;
+    margin: 0 10px;
+    width: 100%;
   }
   .container .plan__image {
-    width: 370px;
+    width: 100%;
     height: 220px;
+  }
+}
+@media (min-width: 896px) and (max-width: 1023px) {
+  .container .plan__items.slick-slide {
+    margin: 0 40px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .container .plan__items.slick-slide {
+    margin: 0 30px;
+    width: 100%;
+  }
+  .container .plan__image {
+    width: 100%;
+    height: 250px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1223px) {
@@ -298,31 +386,101 @@
     margin: 0 auto;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .container .destination {
-    height: 1870px;
+    height: 2700px;
   }
   .container .destination__list .grid.wide {
     width: auto;
   }
   .container .destination__items {
     margin: 20px auto;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
   }
   .container .destination .star::before {
-    left: calc(50% - 160px);
+    padding: 12px 25px;
+    font-size: 4rem;
+  }
+  .container .destination .star::before {
+    left: calc(50% - 234px);
   }
   .container .destination__image {
-    width: 1870px;
+    height: 2700px;
   }
   .container .destination__image img {
-    width: 1870px;
+    height: 2700px;
+  }
+  .container .destination__title {
+    padding: 400px 0 80px 0;
+    text-align: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .container .destination {
+    height: 2200px;
+  }
+  .container .destination__list .grid.wide {
+    width: auto;
+  }
+  .container .destination__items {
+    width: 500px;
+    height: 500px;
+  }
+  .container .destination .star::before {
+    left: calc(50% - 234px);
+    top: 50%;
+  }
+  .container .destination__image {
+    height: 2200px;
+  }
+  .container .destination__image img {
+    height: 2200px;
+  }
+  .container .destination__title {
+    padding: 300px 0 80px 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1223px) {
   .container .unforgettable .grid.wide {
     max-width: 1000px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container .unforgettable {
+    height: 2950px;
+  }
+  .container .unforgettable__title {
+    padding-top: 250px;
+  }
+  .container .unforgettable__image {
+    height: 2950px;
+  }
+  .container .unforgettable__image img {
+    object-fit: cover;
+  }
+  .container .unforgettable .grid.wide {
+    width: 650px;
+  }
+  .container .unforgettable__items {
+    height: 700px;
+    margin: 20px 0;
+  }
+  .container .unforgettable .c4-izmir .button button {
+    padding: 16px 24px;
+    font-size: 2rem;
+  }
+  .container .unforgettable .c4-izmir .subtitle h4 {
+    font-size: 3rem;
+    line-height: 1.47em;
+  }
+  .container .unforgettable .c4-izmir .subtitle h3 {
+    font-size: 2.2rem;
+  }
+  .container .unforgettable .c4-izmir:hover figcaption .button {
+    top: 3%;
+    right: 4.7%;
+    transition: all 0.4s linear;
   }
 }
 @media (min-width: 768px) and (max-width: 1223px) {
@@ -340,13 +498,16 @@
     width: 700px;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .container .winter__list .grid.wide {
     width: auto;
   }
+  .container .winter__title p {
+    padding: 0 30px;
+  }
 }
 
-@media (min-width: 1024px) and (max-width: 1223px) {
+@media (min-width: 768px) and (max-width: 1223px) {
   .footer .wide .col {
     padding-left: 16px;
     padding-right: 16px;
@@ -372,6 +533,11 @@
   .footer__ins--list .row {
     margin-left: -2.5px;
     margin-right: -2.5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer .wide {
+    width: auto;
   }
 }
 

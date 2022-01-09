@@ -209,7 +209,6 @@
 	.PerfectHoliday {
 		&__title {
 			text-align: center;
-			padding-bottom: 40px;
 			h5 {
 				@include size-6($font-satisfy, 3.3rem, 600, 0px, 6rem, $color-primary);
 			}
@@ -221,6 +220,7 @@
 			p {
 				@include size-5(1.7rem, 600, 1px, 2.8rem, $color-text-50);
 				margin-top: 10px;
+				padding: 0 60px 40px 60px;
 			}
 		}
 
