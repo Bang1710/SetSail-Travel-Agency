@@ -1,0 +1,27 @@
+.header {
+	@media (min-width: 1224px) {
+		&__ipad {
+			display: none;
+		}
+	}
+	@media (min-width: 1224px) and (max-width: 1280px) {
+		&__logo {
+			margin-right: 0;
+		}
+
+		&__items {
+			padding: 20px 30px;
+		}
+
+		&__list {
+			padding-left: 20px;
+		}
+	}
+
+	@media (max-width: 1223px) {
+		display: none;
+		&__ipad {
+			display: flex;
+		}
+	}
+}

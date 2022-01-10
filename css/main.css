@@ -155,7 +155,7 @@
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   padding: 30px;
   border-bottom: 1px solid #f1f1f1;
@@ -701,7 +701,6 @@
   line-height: 2.8rem;
   color: #505050;
   margin-top: 10px;
-  padding: 0 60px 40px 60px;
 }
 .container .PerfectHoliday__list {
   padding-top: 15px;
@@ -724,8 +723,8 @@
   overflow: hidden;
 }
 .container .PerfectHoliday__image img {
-  width: 252.5px;
-  height: 252.5px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: 0.3s ease 0.2s;
 }
@@ -1528,7 +1527,7 @@
 .container .unforgettable__image img {
   width: 100%;
   height: 100%;
-  object-fit: center;
+  object-fit: cover;
 }
 .container .unforgettable__content {
   position: absolute;

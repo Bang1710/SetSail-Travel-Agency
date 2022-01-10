@@ -71,6 +71,12 @@ $(".plan__list").slick({
 				slidesToShow: 1,
 			},
 		},
+		{
+			breakpoint: 320,
+			settings: {
+				slidesToShow: 1,
+			},
+		},
 	],
 });
 
@@ -88,6 +94,19 @@ $(".topreview__list").slick({
 			breakpoint: 769,
 			settings: {
 				slidesToShow: 2,
+			},
+		},
+		{
+		
+			breakpoint: 426,
+			settings: {
+				slidesToShow: 1,
+			},
+		},
+		{
+			breakpoint: 319,
+			settings: {
+				slidesToShow: 1,
 			},
 		},
 	],

@@ -7,7 +7,7 @@
 .header {
 	// min-width: 1280px - 1366px
 	@include WH(100%, 80px);
-	@include flex-rw(flex, flex-start, center);
+	@include flex-rw(flex, space-around, center);
 	padding: 30px;
 	border-bottom: 1px solid #f1f1f1;
 	box-shadow: $box-shadow;
