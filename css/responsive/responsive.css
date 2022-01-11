@@ -100,7 +100,7 @@
   .slider__subTitle h1 {
     font-size: 7rem;
     font-weight: 600;
-    line-height: 7rem;
+    line-height: 10rem;
   }
   .slider__para p {
     font-size: 1.8rem;
@@ -245,7 +245,7 @@
 }
 @media (min-width: 1224px) {
   .container .blog__left--nd p {
-    padding-bottom: 0;
+    padding-bottom: 15;
     margin-top: 0px;
   }
 }
@@ -861,6 +861,53 @@
   iframe.video {
     width: 95% !important;
     height: 50% !important;
+  }
+}
+@media (min-width: 600px) {
+  .slider__para p {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .PerfectHoliday__title p,
+.breathtakingCities__title p,
+.unforgettable__title p,
+.destination__title p,
+.topreview__title p,
+.plan__title p,
+.winter__title p {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .slider__para p {
+    width: 500px;
+  }
+
+  .PerfectHoliday__title p,
+.breathtakingCities__title p,
+.unforgettable__title p,
+.destination__title p,
+.topreview__title p,
+.plan__title p,
+.winter__title p {
+    width: 550px;
+  }
+}
+@media (min-width: 768px) {
+  .slider__para p {
+    width: 700px;
+  }
+
+  .PerfectHoliday__title p,
+.breathtakingCities__title p,
+.unforgettable__title p,
+.destination__title p,
+.topreview__title p,
+.plan__title p,
+.winter__title p {
+    width: 650px;
   }
 }
 

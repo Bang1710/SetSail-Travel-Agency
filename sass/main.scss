@@ -64,7 +64,7 @@
 
 	&__subTitle {
 		h1 {
-			@include size-5(12rem, 500, 1px, 12rem, $color-text-ff);
+			@include size-5(12rem, 500, 1px, 13rem, $color-text-ff);
 			animation: blackinUp 4s 2s infinite;
 			text-shadow: $box-shadow;
 		}
@@ -108,6 +108,7 @@
 			@include size-5(1.5rem, 400, 0, normal, $color-primary);
 			padding: 20px;
 			flex: 1;
+			background-color: transparent;
 			cursor: text;
 			option {
 				color: $color-text-21;
@@ -870,6 +871,7 @@
 
 		&__content {
 			padding-left: 22px;
+			flex: 1;
 			h3 {
 				@include size-5(2.2rem, 600, -1.1px, 2.8rem, $color-text-21);
 				&:hover {
@@ -927,6 +929,7 @@
 			&--image {
 				width: 136px;
 				height: 136px;
+				flex: 2;
 				img {
 					width: 100%;
 					height: 100%;
@@ -936,8 +939,9 @@
 
 			&--nd {
 				padding-left: 25px;
+				flex: 8;
 				h3 {
-					padding-bottom: 5px;
+					padding-bottom: 10px;
 					@include size-5(2.2rem, 600, -1.1px, 2.8rem, $color-text-21);
 					&:hover {
 						color: $color-primary;
@@ -947,8 +951,9 @@
 				}
 
 				p {
-					padding-bottom: 15px;
+					padding-bottom: 25px;
 					@include size-5(1.4rem, normal, 0px, 2.4rem, $color-text-50);
+					display: inline-block;
 				}
 
 				h4 {
@@ -1021,7 +1026,7 @@
 		position: relative;
 		&__image {
 			width: 100%;
-			height: 1024px;
+			height: 1400px;
 			img {
 				width: 100%;
 				height: 100%;

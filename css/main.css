@@ -546,7 +546,7 @@
   font-size: 12rem;
   font-weight: 500;
   letter-spacing: 1px;
-  line-height: 12rem;
+  line-height: 13rem;
   color: #ffffff;
   animation: blackinUp 4s 2s infinite;
   text-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, 0.1);
@@ -595,6 +595,7 @@
   color: #3FD0D4;
   padding: 20px;
   flex: 1;
+  background-color: transparent;
   cursor: text;
 }
 .searchbar__address input option,
@@ -1358,6 +1359,7 @@
 }
 .container .topreview__content {
   padding-left: 22px;
+  flex: 1;
 }
 .container .topreview__content h3 {
   font-size: 2.2rem;
@@ -1427,6 +1429,7 @@
 .container .blog__left--image {
   width: 136px;
   height: 136px;
+  flex: 2;
 }
 .container .blog__left--image img {
   width: 100%;
@@ -1435,9 +1438,10 @@
 }
 .container .blog__left--nd {
   padding-left: 25px;
+  flex: 8;
 }
 .container .blog__left--nd h3 {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -1450,12 +1454,13 @@
   cursor: pointer;
 }
 .container .blog__left--nd p {
-  padding-bottom: 15px;
+  padding-bottom: 25px;
   font-size: 1.4rem;
   font-weight: normal;
   letter-spacing: 0px;
   line-height: 2.4rem;
   color: #505050;
+  display: inline-block;
 }
 .container .blog__left--nd h4 {
   font-size: 1.4rem;
@@ -1522,7 +1527,7 @@
 }
 .container .unforgettable__image {
   width: 100%;
-  height: 1024px;
+  height: 1400px;
 }
 .container .unforgettable__image img {
   width: 100%;

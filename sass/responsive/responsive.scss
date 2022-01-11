@@ -13,5 +13,58 @@
 	}
 }
 
+@media (min-width: 600px) {
+	.slider__para p {
+		padding: 0;
+		margin: 0 auto;
+	}
 
+	.PerfectHoliday,
+	.breathtakingCities,
+	.unforgettable,
+	.destination,
+	.topreview,
+	.plan,
+	.winter {
+		&__title p {
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+}
 
+@media (min-width: 600px) and (max-width: 768px) {
+	.slider__para p {
+		width: 500px;
+	}
+
+	.PerfectHoliday,
+	.breathtakingCities,
+	.unforgettable,
+	.destination,
+	.topreview,
+	.plan,
+	.winter {
+		&__title p {
+			width: 550px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.slider__para p {
+		width: 700px;
+	}
+
+	.PerfectHoliday,
+	.breathtakingCities,
+	.unforgettable,
+	.destination,
+	.topreview,
+	.plan,
+	.winter {
+		&__title p {
+			width: 650px;
+		}
+	}
+}
