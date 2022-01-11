@@ -40,7 +40,7 @@ $(".slider").slick({
 $(".plan__list").slick({
 	infinite: true,
 	slidesToShow: 4,
-	slidesToScroll: 2,
+	slidesToScroll: 1,
 	arrows: false,
 	dots: true,
 	cssEase: "ease-in-out",

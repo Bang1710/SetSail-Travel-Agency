@@ -1,3 +1,6 @@
+@import "../variables.scss";
+@import "../mixin.scss";
+
 .container {
 	.topreview {
 		@media (min-width: 320px) and (max-width: 1223px) {
@@ -21,14 +24,11 @@
 
 		@media (min-width: 320px) and (max-width: 599px) {
 			&__title h2 {
-				font-size: 3.5rem;
-				line-height: 3.5rem;
+				@include size-4(3.5rem, null, null, 3.5rem);
 			}
 
 			&__title p {
-				font-size: 1.3rem;
-				font-weight: 500;
-				line-height: 2.6rem;
+				@include size-4(1.3rem, 500, null, 2.6rem);
 				text-align: center;
 				padding: 0 20px;
 			}
@@ -45,9 +45,8 @@
 
 		@media (min-width: 768px) and (max-width: 1223px) {
 			&__right {
-				width: 600px;
-				height: 750px;
-				margin: 60px auto 60px auto;
+				@include WH(600px, 750px);
+				margin: 60px auto;
 				&--content {
 					padding: 100px 20px;
 
@@ -68,9 +67,8 @@
 				width: auto;
 			}
 			&__right {
-				width: 500px;
-				height: 650px;
-				margin: 60px auto 60px auto;
+				@include WH(500px, 650px);
+				margin: 60px auto;
 				&--content {
 					padding: 100px 20px;
 
@@ -598,7 +596,7 @@
 		}
 
 		@media (min-width: 320px) and (max-width: 599px) {
-			height: 1800px;
+			height: 1900px;
 
 			&__title h2 {
 				font-size: 4.5rem;
@@ -614,20 +612,32 @@
 			}
 
 			&__image {
-				height: 1800px;
+				height: 1900px;
 			}
 
 			&__list {
-				padding: 0 20px;
+				padding: 0 10px;
 			}
 
 			&__items {
-				height: 400px;
+				height: 420px;
 			}
 
 			.c4-izmir:hover figcaption .button {
 				right: 30px;
 				top: 5%;
+			}
+		}
+
+		@media (min-width: 400px) and (max-width: 599px) {
+			height: 2000px;
+
+			&__items {
+				height: 480px;
+			}
+
+			&__image {
+				height: 2000px;
 			}
 		}
 	}

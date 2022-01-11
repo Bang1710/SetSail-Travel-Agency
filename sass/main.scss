@@ -64,7 +64,7 @@
 
 	&__subTitle {
 		h1 {
-			@include size-5(12rem, 500, 1px, 13rem, $color-text-ff);
+			@include size-5(12rem, 500, 1px, 15rem, $color-text-ff);
 			animation: blackinUp 4s 2s infinite;
 			text-shadow: $box-shadow;
 		}
@@ -165,33 +165,20 @@
 // - Pack Up and Go
 
 .modal__video {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	@include overplay(fixed, 0, 0, 0, 0, 12);
+	@include WH(100%, 100vh);
 	background-color: rgba(0, 0, 0, 0.8);
-	z-index: 12;
-	width: 100%;
-	height: 100vh;
 	display: none;
-	// opacity: 0;
 	transition: 0.4s linear;
 
 	.video {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include posXY(absolute, 50%, 50%, translate(-50%, -50%));
 	}
 
 	.video__icon {
 		i {
-			position: absolute;
-			top: 3%;
-			right: 2%;
-			font-size: 3rem;
-			color: $color-text-ff;
+			@include overplay(absolute, 3%, 2%, null, null, null);
+			@include size-5(3rem, null, null, null, $color-text-ff);
 		}
 
 		i:hover {
@@ -221,9 +208,8 @@
 			}
 
 			p {
-				@include size-5(1.7rem, 600, 1px, 2.8rem, $color-text-50);
+				@include size-5(1.7rem, 400, 1px, 2.8rem, $color-text-50);
 				margin-top: 10px;
-				// padding: 0 200px 40px 200px;
 			}
 		}
 
@@ -253,35 +239,20 @@
 		}
 
 		&__heading {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			@include overplay(absolute, 0, 0, 0, 0, null);
 
 			h2 {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				color: white;
-				font-size: 4.8rem;
-				font-weight: 100;
-				font-family: $font-satisfy;
+				@include posXY(absolute, 50%, 50%, translate(-50%, 100%));
+				@include size-6($font-satisfy, 4.8rem, 100, null, null, $color-text-ff);
 				text-shadow: $box-shadow;
+				transition: 0.5s ease;
 				z-index: 5;
 				opacity: 0;
-				transform: translate(-50%, 100%);
-				transition: 0.5s ease;
 			}
 
 			&:before {
 				content: "";
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
+				@include overplay(absolute, 0, 0, 0, 0, -1);
 				background: rgba(0, 0, 0, 0.4);
 				border-radius: 100%;
 				-webkit-transform: scale(0);
@@ -308,15 +279,11 @@
 		}
 
 		&__content {
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			@include overplay(absolute, null, 0 , 0, 0, 10);
 			padding: 0px;
 			height: 0;
-			color: white;
+			color: $color-text-ff;
 			box-shadow: $box-shadow;
-			z-index: 10;
 			transition: 0.5s ease 0.2s;
 
 			h4 {
@@ -325,9 +292,7 @@
 			}
 
 			.subtitle {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
+				@include flex-rw(flex, space-between, center);
 				&__rating {
 					i {
 						color: #3fd0d5;
@@ -341,8 +306,7 @@
 
 				&__price {
 					span {
-						font-size: 1.8rem;
-						font-weight: 600;
+						@include size-4(1.8rem, 600, null, null);
 					}
 				}
 			}
@@ -350,33 +314,22 @@
 
 		&__greeting {
 			margin: 40px auto 80px auto;
-			width: 438px;
-			height: 133px;
+			@include WH(438px, 133px);
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				@include image(100%, 100%, cover);
 				margin: 0 auto;
 			}
 		}
 	}
 
 	.breathtakingCities {
-		background-image: url(../image/breathtaking.jfif);
-		width: 100%;
-		height: 700px;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center;
+		background: url(../image/breathtaking.jfif) no-repeat fixed center ;
+		@include WH(100%, 700px);
 		background-size: cover;
 		position: relative;
 
 		&__overplay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			@include overplay(absolute, 0, 0, 0, 0, null);
 			background-color: rgba(0, 0, 0, 0.4);
 		}
 
@@ -398,41 +351,28 @@
 		}
 
 		&__video {
-			width: 1000px;
-			height: 500px;
+			@include WH(1000px, 500px);
 			margin: 0 auto;
 			position: relative;
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				@include image(100%, 100%, cover);
 				box-shadow: $box-shadow;
 				border-radius: 2px;
 			}
 
 			.overplay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
+				@include overplay(absolute, 0, 0, 0, 0, null);
 				background-color: rgba(0, 0, 0, 0.4);
 			}
 
 			i {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				padding: 20px 20px 20px 27px;
-				background: white;
-				color: #3fd0d4;
+				@include posXY(absolute, 50%, 50%, translate(-50%, -50%));
+				@include button(20px 20px 20px 27px, 50%);
+				@include color($color-primary, $color-text-ff);
 				font-size: 3rem;
-				border-radius: 50%;
 				&:hover {
-					color: #106568;
+					@include color(rgb(97, 95, 95),#106568);
 					transition: $transition-4s;
-					background-color: rgb(97, 95, 95);
 					cursor: pointer;
 				}
 			}
@@ -485,14 +425,10 @@
 		}
 
 		&__image {
-			width: 76px;
-			height: 78px;
+			@include WH(76px, 78px);
 			margin: 0 auto;
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				// box-shadow: $box-shadow;
+				@include image(100%, 100%, cover);
 				&:hover {
 					transform: translateY(-10px);
 					box-shadow: -1px 8px 10px 0px #c3c0c0;
@@ -512,36 +448,21 @@
 		}
 
 		&__image {
-			width: 100%;
-			height: 476px;
+			@include WH(100%, 476px);
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				@include image(100%, 100%, cover);
 			}
 		}
 
 		&__content {
-			padding: 0;
-			background-color: #3fd0d4;
-			color: #ffffff;
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
+			@extend %flex-start;
+			@include color($color-primary, $color-text-ff);
+			@include overplay(absolute, null, 0, 0, 0, null);
 			flex-direction: column;
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			height: 0;
 			transition: 0.5s ease;
+			padding: 0;
+			height: 0;
 
-			// &:hover {
-			// 	opacity: 1;
-			// 	// height: 100%;
-			// 	transition: all 0.3s linear;
-
-			// }
 			h2 {
 				@include size-4(1.8rem, 600, 1px, 2.4rem);
 			}
@@ -571,9 +492,7 @@
 			background-color: #3abdc1;
 			ul {
 				list-style: none;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				@extend %flex-center;
 				padding: 72px 0;
 				li {
 					color: $color-text-ff;
@@ -607,31 +526,24 @@
 
 		&__items {
 			padding-top: 20px;
-			width: 320px;
-			height: auto;
+			@include WH(320px, auto);
 			box-shadow: 5px 8px 13.92px 2px rgb(0 0 0 / 2%);
 		}
 
 		&__image {
-			width: 320px;
-			height: 200px;
 			overflow: hidden;
+			@include WH(320px, 200px);
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				@include image(100%, 100%, cover);
 				transition: 0.4s ease;
 			}
 		}
 
 		&__infor {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
+			@extend %flex-start;
+			@include color($color-primary, $color-text-ff);
 			padding: 8px 10px 8px 26px;
-			background-color: #3fd0d4;
 			width: inherit;
-			color: white;
 
 			&--callendar,
 			&--indiviual,
@@ -671,12 +583,8 @@
 
 		&__subtitle {
 			padding-top: 4px;
-			font-size: 1.5rem;
-			line-height: 2.4rem;
-			color: #212121;
-			font-weight: 600;
-			display: flex;
-			align-items: center;
+			@include size-5(1.5rem, 600, null, 2.4rem, $color-text-21);
+			@include flex-rw(flex, center, null);
 			i {
 				font-size: 1.5rem;
 				margin: 0 8px 0 32px;
@@ -685,26 +593,18 @@
 	}
 
 	.destination {
-		width: 100%;
-		height: 920px;
+		@include WH(100%, 920px);
 		position: relative;
 
 		&__image {
-			width: 100%;
-			height: 920px;
+			@include WH(100%, 920px);
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				@include image(100%, 100%, cover);
 			}
 		}
 
 		&__content {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			@include overplay(absolute, 0, 0, 0, 0, null);
 		}
 
 		&__title {
@@ -735,37 +635,24 @@
 		}
 
 		.star::before {
-			position: absolute;
 			content: "★";
-			top: 9%;
-			left: 6%;
-			z-index: 4;
-			background-color: #3fd0d4;
-			color: white;
-			padding: 3px 14px;
-			border-radius: 50%;
-			font-size: 3rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			@include posXY(absolute, 9%, 6%, null);
+			@extend %flex-center;
+			@include button(3px 14px, 50%);
+			@include color($color-primary, $color-text-ff);
 			border: 1px solid #f1f1f1;
+			z-index: 4;
+			font-size: 3rem;
 		}
 
 		&__items {
-			width: 292px;
-			height: 292px;
+			@include WH(292px, 292px);
 			overflow: hidden;
 			position: relative;
 			border-radius: 50%;
 			&::before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background-color: rgba(0, 0, 0, 0.6);
+				@include overplay(absolute, 0, 0, 0, 0, 3);				background-color: rgba(0, 0, 0, 0.6);
 				border-radius: 50%;
-				z-index: 3;
 				transform: scale(0);
 				content: "";
 			}
@@ -782,45 +669,26 @@
 			}
 
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				// border-radius: 50%;
+				@include image(100%, 100%, cover);
 				transform: scale(1, 1) translate(0, 0);
 			}
 
 			h2 {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				color: $color-text-ff;
-				font-size: 4.8rem;
-				font-weight: 100;
-				letter-spacing: 0;
-				font-family: $font-satisfy;
+				@include posXY(absolute, 50%, 50%, translate(-50%, -50%));
+				@include size-6($font-satisfy, 4.8rem, 100, 0, null, $color-text-ff);
 				z-index: 4;
 			}
 		}
 	}
 
 	.topreview {
-		background-image: url(../image/bg-img-rw.jfif);
-		background-repeat: no-repeat;
-		background-position: center;
+		background: url(../image/bg-img-rw.jfif) no-repeat fixed center ;
 		background-size: cover;
-		background-attachment: fixed;
-		width: 100%;
-		height: 774px;
+		@include WH(100%, 744px);
 		margin-bottom: 150px;
 		position: relative;
 		&__overplay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			z-index: 2;
+			@include overplay(absolute, 0, 0, 0, 0, 2);
 			background-color: rgba(0, 0, 0, 0.6);
 		}
 
@@ -854,17 +722,13 @@
 		}
 
 		&__items {
-			display: inline-flex;
-			justify-content: center;
+			@include flex-rw(inline-flex, null, null);
+			@include button(40px 38px 40px 38px, 3px);
+			background-color: $color-text-ff;
 			margin: 20px 20px;
-			padding: 40px 38px 40px 38px;
-			background-color: white;
-			border-radius: 3px;
 
 			img {
-				width: 107px;
-				height: 107px;
-				object-fit: cover;
+				@include image(107px, 107px, cover);
 				border-radius: 50%;
 			}
 		}
@@ -973,46 +837,31 @@
 		}
 
 		&__right {
-			width: 310px;
-			height: 410px;
+			@include WH(310px, 410px);
 			margin: 60px 60px 60px 120px;
 			position: relative;
 			&--image {
-				width: 100%;
-				height: 100%;
+				@include WH(100%, 100%);
 				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
+					@include image(100%, 100%, cover);
 				}
 			}
 
 			&--content {
-				left: -6%;
-				position: absolute;
-				top: 2%;
-				background-color: #3fd0d4;
-				right: -6%;
-				padding: 80px 20px;
+				@include overplay(absolute, 2%, -6%, null, -6%, null);
 				clip-path: polygon(100% 60%, 100% 0%, 0 45%, 0% 100%);
+				background-color: $color-primary;
+				padding: 80px 20px;
 
 				h2 {
-					font-family: $font-satisfy;
-					text-align: center;
-					font-size: 30px;
-					line-height: 25px;
-					font-weight: 400;
-					color: #212121;
+					@include size-6($font-satisfy, 3rem, 400, null, 2.5rem, $color-text-21);
 					transform: rotate(-17.5deg);
+					text-align: center;
 				}
 
 				h3 {
+					@include size-6(null, 4rem, 600, null, 1.15rem, $color-text-ff);
 					text-align: center;
-					color: #fff;
-					font-size: 40px;
-					line-height: 1.15em;
-					font-weight: 600;
-					letter-spacing: -0.05em;
 					transform: rotate(-17.5deg);
 				}
 			}
@@ -1020,26 +869,18 @@
 	}
 
 	.unforgettable {
-		width: 100%;
-		height: 1024px;
+		@include WH(100%, 1024px);
 		overflow: hidden;
 		position: relative;
 		&__image {
-			width: 100%;
-			height: 1400px;
+			@include WH(100%, 1400px);
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				@include image(100%, 100%, cover);
 			}
 		}
 
 		&__content {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			@include overplay(absolute, 0, 0, 0, 0, null);
 		}
 
 		&__title {
@@ -1063,8 +904,7 @@
 			width: 1100px;
 		}
 		iframe {
-			width: 100%;
-			height: 520px;
+			@include WH(100%, 520px);
 			margin-bottom: 100px;
 		}
 
@@ -1097,13 +937,10 @@
 		}
 
 		&__image {
-			width: 456px;
-			height: 292px;
+			@include WH(456px, 292px);
 			margin: 30px 0 0 60px;
 			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				@include image(100%, 100%, cover);
 			}
 		}
 
@@ -1122,8 +959,7 @@
 				list-style: none;
 				padding-top: 15px;
 				li {
-					display: flex;
-					align-items: center;
+					@include flex-rw(flex, null, center);
 					padding: 6px 0;
 					i {
 						color: $color-primary;
@@ -1144,48 +980,36 @@
 			background-color: $color-primary;
 			width: 100%;
 			h2 {
+				@include size-5(3rem, 600, -0.05em, 1.2rem, $color-text-ff);
 				margin-top: 25px;
-				font-size: 3rem;
-				line-height: 1.2em;
-				font-weight: 600;
-				letter-spacing: -0.05em;
-				color: white;
 			}
 		}
 
 		&__area {
 			margin: 20px 0 6px 0;
-			display: flex;
+			@include flex-rw(flex, null, baseline);
 			background-color: #6fdcdf;
 			padding: 20px 16px;
-			align-items: baseline;
 			i {
-				color: white;
+				color: $color-text-ff;
 				margin-right: 12px;
 			}
 
 			textarea {
 				width: 100%;
-				background-color: transparent;
-				color: white;
 				font-weight: 500;
+				@include color(transparent, $color-text-ff);
 			}
 			::placeholder {
-				/* Chrome, Firefox, Opera, Safari 10.1+ */
-				color: white;
-				font-weight: 500;
+				@include size-5(null, 500, null, null, $color-text-ff);
 			}
 
 			:-ms-input-placeholder {
-				/* Internet Explorer 10-11 */
-				color: white;
-				font-weight: 500;
+				@include size-5(null, 500, null, null, $color-text-ff);
 			}
 
 			::-ms-input-placeholder {
-				/* Microsoft Edge */
-				color: white;
-				font-weight: 500;
+				@include size-5(null, 500, null, null, $color-text-ff);
 			}
 		}
 
@@ -1204,41 +1028,33 @@
 			background-color: #6fdcdf;
 			padding: 16px 16px;
 			i {
-				color: white;
+				color: $color-text-ff;
 				margin-right: 8px;
 			}
 			input {
-				background-color: transparent;
-				color: white;
+				@include color(transparent, $color-text-ff);
 				font-weight: 500;
 			}
 			::placeholder {
 				/* Chrome, Firefox, Opera, Safari 10.1+ */
-				color: white;
-				font-weight: 500;
+				@include size-5(null, 500, null, null, $color-text-ff);
 			}
 
 			:-ms-input-placeholder {
 				/* Internet Explorer 10-11 */
-				color: white;
-				font-weight: 500;
+				@include size-5(null, 500, null, null, $color-text-ff);
 			}
 
 			::-ms-input-placeholder {
 				/* Microsoft Edge */
-				color: white;
-				font-weight: 500;
+				@include size-5(null, 500, null, null, $color-text-ff);
 			}
 		}
 
 		input[type="submit"] {
 			width: 100%;
-			font-size: 1.6rem;
-			font-weight: 600;
-			letter-spacing: 1.3px;
-			color: #212121;
-			line-height: 5.2rem;
-			background-color: white;
+			@include size-4(1.6rem, 600, 1.3px, 5.2rem);
+			@include color($color-text-ff, $color-text-21);
 			&:hover {
 				background-color: #23afa9;
 				transition: $transition-4s;

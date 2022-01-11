@@ -211,6 +211,76 @@
   }
 }
 
+@keyframes hover {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes op1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes transformY {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes transformX {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+    display: none;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes blackinUp {
+  from {
+    transform: translateY(320px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes blackinDown {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+.active {
+  color: #3FD0D4;
+}
+
 @media (min-width: 320px) and (max-width: 1223px) {
   .container .topreview {
     height: 850px;
@@ -253,7 +323,7 @@
   .container .blog__right {
     width: 600px;
     height: 750px;
-    margin: 60px auto 60px auto;
+    margin: 60px auto;
   }
   .container .blog__right--content {
     padding: 100px 20px;
@@ -273,7 +343,7 @@
   .container .blog__right {
     width: 500px;
     height: 650px;
-    margin: 60px auto 60px auto;
+    margin: 60px auto;
   }
   .container .blog__right--content {
     padding: 100px 20px;
@@ -703,7 +773,7 @@
 }
 @media (min-width: 320px) and (max-width: 599px) {
   .container .unforgettable {
-    height: 1800px;
+    height: 1900px;
   }
   .container .unforgettable__title h2 {
     font-size: 4.5rem;
@@ -717,17 +787,28 @@
     padding: 0 20px;
   }
   .container .unforgettable__image {
-    height: 1800px;
+    height: 1900px;
   }
   .container .unforgettable__list {
-    padding: 0 20px;
+    padding: 0 10px;
   }
   .container .unforgettable__items {
-    height: 400px;
+    height: 420px;
   }
   .container .unforgettable .c4-izmir:hover figcaption .button {
     right: 30px;
     top: 5%;
+  }
+}
+@media (min-width: 400px) and (max-width: 599px) {
+  .container .unforgettable {
+    height: 2000px;
+  }
+  .container .unforgettable__items {
+    height: 480px;
+  }
+  .container .unforgettable__image {
+    height: 2000px;
   }
 }
 @media (min-width: 768px) and (max-width: 1223px) {
@@ -758,7 +839,7 @@
     margin: 30px 0 0 0;
   }
   .container .contactUs__form {
-    margin: 60px 10px 10px 10px;
+    margin: 60px auto 0;
   }
   .container .contactUs__lh {
     flex-direction: column;
